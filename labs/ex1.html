@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ex1</title>
+</head>
+<body>
+<script type="text/javascript">
+url = prompt("Enter URL:");
+//Write the code to make a simple check if the URL the user has entered is valid 
+//(typical URL: “http://www.microsoft.com”).
+
+// Extract few URL properties 
+leftPart = url.substr(0, 7); 
+posDot = url.indexOf("."); 
+urlLen = url.length; 
+// Check if it is valid 
+if (leftPart === "http://" && posDot > 7 && urlLen >== 15) 
+{
+	alert("URL is valid.");
+} else 
+{ 
+	alert("Please enter URL in the following form:\n\n http://www.domain.com");
+}
+</script>
+</body>
+</html>

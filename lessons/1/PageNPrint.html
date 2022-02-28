@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Print the Page</title>
+<script type="text/javascript"> 
+
+function createCookie()
+{
+	d1=new Date();
+	document.writeln("Date is:"+d1.getDate());
+	document.cookie = "key1=Apple;key2=Surface4Pro;expires="+d1.getdate();
+	}
+</script> 
+
+</head>
+<body>
+<form> 
+	<input type="button" value="Print" onclick="window.print()" />
+	<input type="button" value="SaveCookies" onClick="createCookie()">
+</form>
+</body>
+</html>
+

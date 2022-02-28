@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Classes and Prototypes</title>
+    <script src="DemoB.js?v=2"></script>
+    <script src="DemoHClassModules.js"></script>
+</head>
+<body>
+    <!--Classes and Prototypes
+        In JavaScript, a class is a set of objects that inherit properties 
+        from the same prototype object.
+        The prototype object, therefore, is the central feature of a class
+    -->
+
+    <!--<script>
+        // This is a factory function that returns a new range object.
+        function range(from, to) {
+            // Use the inherit() function to create an object that inherits from the
+            // prototype object defined below. The prototype object is stored as
+            // a property of this function, and defines the shared methods (behavior)
+            // for all range objects.
+            var r = inherit(range.methods);
+            // Store the start and end points (state) of this new range object.
+            // These are noninherited properties that are unique to this object.
+            r.from = from;
+            r.to = to;
+            // Finally return the new object
+            return r;
+        }
+        // This prototype object defines methods inherited by all range objects.
+        range.methods = {
+            // Return true if x is in the range, false otherwise
+            // This method works for textual and Date ranges as well as numeric.
+            includes: function (x) { return this.from <= x && x <= this.to; },
+            // Invoke f once for each integer in the range.
+            // This method works only for numeric ranges.
+            foreach: function (f) {
+                for (var x = Math.ceil(this.from); x <= this.to; x++) f(x);
+            },
+            // Return a string representation of the range
+            toString: function () { return "(" + this.from + "..." + this.to + ")"; }
+        };
+        // Here are example uses of a range object.
+        var r = range(1, 3); // Create a range object
+        console.log(r.includes(2)); // => true: 2 is in the range
+        r.foreach(console.log); // Prints 1 2 3
+        console.log(r); // Prints (1...3)
+    </script>-->
+
+<script>
+    var Person = function Person(living, age, gender) {
+        this.living = living;
+        this.age = age;
+        this.gender = gender;
+        this.getGender = function() { return this.gender; };
+        // when the function is called with the new keyword "this" is returned instead of false
+    };
+    var cody = new Person(true, 33, 'male');
+    // cody is an object and an instance of Person()
+    console.log(typeof cody); // logs object
+    console.log(cody); // logs the internal properties and values of cody
+    console.log(cody.constructor); // logs the Person() function
+</script>
+</body>
+</html>

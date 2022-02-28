@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Enumerating</title>
+    <script type="text/javascript" src="DemoC.js?v=2"></script>
+</head>
+<body>
+    <!-- Enumerating Properties-->
+    <!--<script>
+        var o = { x: 1, y: 2, z: 3 }; // Three enumerable own properties
+        console.log( o.propertyIsEnumerable("toString")) // => false: not enumerable
+        for (p in o) // Loop through the properties
+            console.log(p + "-" + o[p]); // Prints x, y, and z, but not toString
+           // console.log(p + "-" + o.p);
+        console.log("-----------------");
+    </script>
+    <script>
+        var o = { x: 1, y: 2, z: 3 };
+        var q = inherit(o);
+        q.r = 100;
+        q.s = 200;
+        for (p in q)
+            console.log(p + "-" + q[p]);
+        console.log("-----------------");
+        for (p in q)
+            if (q.hasOwnProperty(p)) console.log(p + "-" + q[p]);
+        console.log("-----------------");
+        for (p in q) {
+            if (typeof q[p] !== "function") console.log(p + "-" + q[p]);
+        }
+    </script>-->
+    <!--<script>
+        var o = { r: 10, s: 20, t: 30, u: 40, v: 50, w: 60, x: 70, y: 80, z: 90 };
+        console.log(o);
+        var q = {};
+        q = extend(q, o);
+        console.log(q);
+    </script>-->
+    <script>
+        var p = { r: 10, s: 20, t: 30, u: 40, v: 50, w: 60, x: 70, y: 80, z: 90 };
+        var q = { a: 100, b: 200, c: 300, d: 400, e: 500, w: 600, x: 700, y: 800, z: 900 };
+        var o = merge(q, p);
+        console.log(o);
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Object Methods</title>
+</head>
+<body>
+    <!--We’ve already seen the hasOwnProperty(), propertyIsEnumerable(), and isPrototypeOf()
+    static functions defined on the Object constructor, such as
+    Object.create() and Object.getPrototypeOf()-->
+    <!--The toString() Method
+    The toString() method takes no arguments; it returns a string that somehow represents
+    the value of the object on which it is invoked.JavaScript invokes this method of an
+    object whenever it needs to convert the object to a string.-->
+    <!--The toLocaleString() Method
+    The purpose of this method is to return a localized string representation of the object. The
+    default toLocaleString() method defined by Object doesn’t do any localization itself:
+    it simply calls toString() and returns that value. The Date and Number classes define
+    customized versions of toLocaleString() that attempt to format numbers, dates, and
+    times according to local conventions. Array defines a toLocaleString() method that
+    works like toString() except that it formats array elements by calling their toLocale
+    String() methods instead of their toString() methods.-->
+
+    <!--The valueOf() Method
+    The valueOf() method is much like the toString() method, but it is called when Java-
+    Script needs to convert an object to some primitive type other than a string—typically,
+    a number. JavaScript calls this method automatically if an object is used in a context
+    where a primitive value is required. The default valueOf() method does nothing interesting,
+    but some of the built-in classes define their own valueOf() method (see
+    Date.valueOf()-->
+
+    <script>
+    </script>
+</body>
+</html>

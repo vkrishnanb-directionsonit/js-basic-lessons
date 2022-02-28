@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>PageE Input</title>
+</head>
+
+<body>
+	<script type="text/javascript">
+		/* eslint-disable */
+		/* Scoping:
+		   -   var : _function scoped_ (only available inside parent functions)
+		   -   let and const : _block scoped_ (available inside a block denoted by { } )
+		   */
+		var global = 'this is global';
+		function scopeFunction() {
+			alsoGlobal = 'This is also global!';
+			var notGlobal = 'This is private to scopeFunction!';
+			function subFunction() {
+				console.log(notGlobal); // We can still access notGlobal in this child function.
+				stillGlobal = 'No var keyword so this is global!';
+				var isPrivate = 'This is private to subFunction!';
+			}
+			//console.log(stillGlobal); // This is an error since we haven't executed subfunction
+			subFunction(); // execute subfunction
+			console.log(stillGlobal); // This will output 'No var keyword so this is global!'
+			//console.log(isPrivate); // This generate an error since isPrivate is private to subfunction().
+			console.log(global); // outputs: 'this is global'
+		}
+		console.log(global); // outputs: 'this is global'
+		//console.log(alsoGlobal); // generates an error since we haven't run scopeFunction yet.
+		scopeFunction();
+		console.log(alsoGlobal); // outputs: 'This is also global!';
+		//console.log(notGlobal); // generates an error. not accessible outside the scopeFunction
+	</script>
+</body>
+
+</html>

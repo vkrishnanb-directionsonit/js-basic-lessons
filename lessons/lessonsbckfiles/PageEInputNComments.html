@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>PageE Input</title>
+</head>
+<body>
+<input id='userInput' size=60 /> 
+<button onClick='userSubmit()'>Submit</button>
+<br>
+<p><input id='txt2'  onKeyUp="userSubmitA('txt2')" /> </p>
+<p><div id='result'></div>
+<script type='text/javascript'>
+document.writeln('<p>Hello</p>');
+  function userSubmit() 
+  {
+   var UI=document.getElementById('userInput').value;
+   document.getElementById('result').innerHTML='You typed: '+UI;
+  }
+  function userSubmitA(v1) 
+  {
+   var UI=document.getElementById(v1).value;
+   document.getElementById('result').innerHTML='You typed: '+UI;
+  }
+</script>
+<script type="text/javascript">
+var x=5;
+
+/* The browser will break the Javascript when it sees this </script> tag.
+Everything from tag forward is now being processed as HTML!
+This is a bad thing! To avoid this you need to avoid using this
+tag anywhere in your Javascript, and if
+you must have it, you should break the string out like this... */
+
+document.writeln('</scr'+'ipt>')
+<script type="text/javascript">
+var x=15;
+
+/* The browser will not break the Javascript when it sees this document.writeln('</scr'+'ipt>') tag.
+Everything from tag forward is now commented */
+document.writeln('<p>Value is '+x);
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+1. Open a new window that displays the status bar, set its width and height to 500 pixels and make it not resizable by the user.
+
+2. How would you set the target property of the links to make them open in the previously (question 1) opened window? Would you use “myWindow” or “myPage” for the target?
+
+3.Write the method that resizes the window opened in question 1 to 300x300 pixels. Ask the user if he prefers the new size and if he answers “No”, resize the window back to its original size.
+
+4.Write the code to make a simple check if the URL the user has entered is valid (typical URL: “http://www.microsoft.com”).
+
+5. Write a function to alert the key name , every time a key is pressed inside a <input type="text" />
+
+6. Remove properties from o if there is not a property with the same name in p. Return o.
+   function restrict(o, p) {
+       // your code goes here
+	return o;
+   }
+
+7 For each property of p, delete the property with the same name from o.
+  Return o.
+
+  function subtract(o, p) {
+	// your code goes here
+	return o;
+ }
+ 

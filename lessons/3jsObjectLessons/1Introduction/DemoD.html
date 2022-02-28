@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>PropertyGettersNSetters</title>
+    <script src="DemoDPropertyGettersNSetters.js"></script>
+    <script src="DemoB.js"></script>
+</head>
+<body>
+    <script >
+        o.data = 100;
+        console.log(o.data);
+    </script>
+
+    <script>
+        p = inherit(o);
+        p.data = 1000;
+        p.y = 500;
+        console.log(p);
+    </script>
+</body>
+</html>

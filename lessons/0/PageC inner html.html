@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="ISO-8859-1">
+  <title>PageC DOM inner html</title>
+</head>
+
+<body>
+  <div id='feedback' style="background-color:yellow" onClick='greetings()'>Users without Javascript see this. </div>
+
+  <p>
+    <button onClick='goodbye()'>Submit</button>
+  </p>
+  <script type='text/javascript'>
+    document.getElementById('feedback').innerHTML = 'Hello World!';
+    function goodbye() {
+      document.getElementById('feedback').innerHTML = 'Goodbye World!';
+    }
+    function greetings() {
+      document.getElementById('feedback').innerHTML = 'Greetings All!!!';
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>PageF Variables</title>
+</head>
+
+<body>
+	<script>
+		let thisIsAString = 'This is a string';
+		let alsoAString = '25';
+		let isANumber = 25;
+		let isEqual = (alsoAString == isANumber); // This is true, they are both 25.
+		let isEqual = (alsoAString === isANumber); // False one is a number, the other a string.
+		let concat = alsoAString + isANumber; // concat is now 2525
+		let addition = isANumber + isANumber; // addition is now 50
+		let alsoANumber = 3.05; // is equal to 3.05 (usually).
+		let floatError = 0.06 + 0.01; // is equal to 0.06999999999999999
+		let anExponent = 1.23e+3; // is equal to 1230
+		let hexadecimal = 0xff; // is equal to 255.
+		let octal = 0377; // is equal to 255.
+		let isTrue = true; // This is a boolean, it can be true or false.
+		let isFalse = false; // This is a boolean, it can be true or false
+		let isArray = [0, 'one', 2, 3, '4', 5]; // This is an array.
+		let valueFromArray = isArray[4]; // assign a single array element to a variable.
+		// in this case valueFromArray = '4'
+		console.log(valueFromArray);
+		let isObject = {
+			'color': 'blue', // This is a Javascript object
+			'dog': 'bark',
+			'array': [0, 1, 2, 3, 4, 5],
+			'myfunc': function () { console.log('do something!'); }
+		}
+		let dog1 = isObject.dog; // dog1 now stores the string 'bark';
+		isObject.myfunc(); // creates an alert box with the value "do something!"
+		let someFunction = function () { return "I am a function!"; }
+		let alsoAFunction = someFunction; //No parentheses() so alsoAFunction becomes a function
+		let result = alsoAFunction();
+		// alsoAFunction is executed here so result stores the
+		// return value of the function which is "I am a function!"
+		console.log(result);
+	</script>
+</body>
+
+</html>

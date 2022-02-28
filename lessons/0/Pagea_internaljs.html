@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PageA</title>
+</head>
+
+<body>
+    <div>
+        Run the java script tags at the end before the closing "body" tag
+        else the dom returns a <b>null</b> object.
+        Because when the first script is loaded the paragraph element is not yet loaded
+    </div>
+    <script>
+        console.log('Before');
+        const p1 = document.querySelector('p');
+        console.log(p1);
+    </script>
+
+    <p>Hi there, how are you</p>
+
+    <p>This is the Second Paragraph in PageA</p>
+    <script>
+        console.log('After');
+        const p = document.querySelector('p');
+        console.log(p);
+    </script>
+</body>
+
+</html>

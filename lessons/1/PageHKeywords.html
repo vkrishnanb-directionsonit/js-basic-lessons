@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Keywords</title>
+</head>
+
+<body>
+	<div id='max'></div>
+	<p></p>
+	<div id='min'></div>
+
+	<script type="text/javascript">
+		document.getElementById('max').innerHTML = `Max:${Number.MAX_VALUE}<p>`;
+		document.getElementById('min').innerHTML = `Min:${Number.MIN_VALUE}`;
+		const x = 100;
+		const y = 0;
+		let s1 = 'Hello';
+		const result = x / s1;
+		document.writeln(`<p>result ${result}`);
+		document.writeln('</p>result === NaN ');
+		// eslint-disable-next-line use-isnan
+		document.writeln(result === NaN);
+
+		document.writeln(`<p>isNaN(x/s1)  ${isNaN(x / s1)}</p>`);
+
+		const z = x / y;
+		document.writeln(`<p>z = ${z}</p>`);
+		s1 = null;
+		document.writeln(`<p>= ${null}</p>`);
+		document.writeln(`<p>s1= ${s1}</p>`);
+		doAlert(s1);
+		let s2; //= undefined;
+		document.writeln(`<p>s2= ${s2}</p>`);
+		doAlert(s2);
+
+		function doAlert(sayThis) {
+			if (sayThis === undefined) {
+				// Check to see if sayThis was passed.
+				sayThis = 'Value is Undefined'; // It wasn't so give it a default value
+			} else if (sayThis === null) {
+				sayThis = 'The Value is Null';
+			} // End check
+			console.log(sayThis); // Toss up the alert.
+		}
+	</script>
+</body>
+
+</html>
