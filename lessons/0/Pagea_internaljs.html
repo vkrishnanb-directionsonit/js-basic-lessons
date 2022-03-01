@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PageA</title>
 </head>
 
@@ -15,13 +16,13 @@
     </div>
     <script>
         console.log('Before');
-        const p1 = document.querySelector('p');
+        const p1 = document.querySelectorAll('p');
         console.log(p1);
     </script>
 
-    <p>Hi there, how are you</p>
-
+    <p>Hi there, how are you - This the first Paragraph</p>
     <p>This is the Second Paragraph in PageA</p>
+
     <script>
         console.log('After');
         const p = document.querySelector('p');

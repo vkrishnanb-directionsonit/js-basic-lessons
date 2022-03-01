@@ -13,13 +13,13 @@
     - If a function does not use a return statement or an empty return statement with no value, JavaScript automatically returns undefined. 
     - That means that **in JavaScript every function returns something, at least undefined.**
 
-    So the function console.log() in Chrome console either uses no or an empty return statement, so that the return value of this function is undefined. 
+    So the function console.log() in Chrome console either uses non or an empty return statement, so that the return value of this function is undefined. 
     This function return value also  gets displayed in the console.
 
     If you're running console.log() from a JS file, this undefined line will not be appended.
 ---
 This undefined also appears when the following line is written in the console: 
-    var bla = "sdfdfs"; 
+    var name = "venkat"; 
 
 The var statement declares a function-scoped or globally-scoped variable.
     

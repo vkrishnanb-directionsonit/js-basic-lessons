@@ -11,7 +11,9 @@
 - **Prettier**: Formats code.
     prettier.io ==> Formatting coding
 
-Install eslint config from https://github.com/wesbos/eslint-config-wesbos or create your own config. 
+Install eslint config from https://github.com/wesbos/eslint-config-wesbos
+ or 
+create your own config. 
 Follow the global installation steps
 
 Install ESLint package in VScode -- ESLint --Dirk Baeumer from	
@@ -29,8 +31,9 @@ It's easier to enter these settings while editing the settings.json file, so cli
 	  "editor.formatOnSave": false
 	},
 	// tell the ESLint plugin to run on save
-	"eslint.autoFixOnSave": true,
-	
+	"editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
 	// Optional BUT IMPORTANT: If you have the prettier extension enabled for other languages like CSS and HTML, turn it off for JS since we are doing it through Eslint already
 	"prettier.disableLanguages": ["javascript", "javascriptreact"],
 

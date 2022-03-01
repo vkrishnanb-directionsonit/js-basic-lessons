@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-	<meta charset="ISO-8859-1">
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, initial-scale=1.0">
 	<title>PageF Variables</title>
 </head>
 
@@ -12,34 +14,51 @@
 		let alsoAString = '25';
 		let isANumber = 25;
 		let isEqual = (alsoAString == isANumber); // This is true, they are both 25.
-		let isEqual = (alsoAString === isANumber); // False one is a number, the other a string.
+		console.log(isEqual);
+		isEqual = (alsoAString === isANumber); // False one is a number, the other a string.
+		console.log(isEqual);
 		let concat = alsoAString + isANumber; // concat is now 2525
+		console.log(concat);
 		let addition = isANumber + isANumber; // addition is now 50
+		console.log(addition);
 		let alsoANumber = 3.05; // is equal to 3.05 (usually).
 		let floatError = 0.06 + 0.01; // is equal to 0.06999999999999999
+		console.log(floatError);
 		let anExponent = 1.23e+3; // is equal to 1230
+		console.log(anExponent);
 		let hexadecimal = 0xff; // is equal to 255.
 		let octal = 0377; // is equal to 255.
 		let isTrue = true; // This is a boolean, it can be true or false.
+		console.log(isTrue);
 		let isFalse = false; // This is a boolean, it can be true or false
-		let isArray = [0, 'one', 2, 3, '4', 5]; // This is an array.
+		console.log(isFalse);
+		let isArray = [100, 'one', 200, 300, '400', 500]; // This is an array.
+		console.log(isArray);
 		let valueFromArray = isArray[4]; // assign a single array element to a variable.
 		// in this case valueFromArray = '4'
 		console.log(valueFromArray);
+		// This is a Javascript object
 		let isObject = {
-			'color': 'blue', // This is a Javascript object
+			'color': 'blue',
 			'dog': 'bark',
 			'array': [0, 1, 2, 3, 4, 5],
 			'myfunc': function () { console.log('do something!'); }
 		}
 		let dog1 = isObject.dog; // dog1 now stores the string 'bark';
-		isObject.myfunc(); // creates an alert box with the value "do something!"
+		console.log(dog1);
+		isObject.myfunc(); // display the value "do something!" in the console
+
+		let funcB = function () { return 100 + 200; }
+		let resultB = funcB();
+		console.log(resultB);
+
 		let someFunction = function () { return "I am a function!"; }
 		let alsoAFunction = someFunction; //No parentheses() so alsoAFunction becomes a function
 		let result = alsoAFunction();
 		// alsoAFunction is executed here so result stores the
 		// return value of the function which is "I am a function!"
 		console.log(result);
+
 	</script>
 </body>
 

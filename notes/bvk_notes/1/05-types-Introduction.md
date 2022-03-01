@@ -1,13 +1,13 @@
 ## Types in Java Script
 
-**SNOB N US**
+**BONNUSS**
 ---
-1. String  
-1. Number  - All numbers like integers, decimals, and floats are all one type .
-1. Object  
 1. Boolean  
+1. Object  
+1. Number  - All numbers like integers, decimals, and floats are all one type .
 1. Null -   
 1. Undefined -  
+1. String  
 1. Symbol - (new into js) used for assigning unique id . Always gives a guaranteed unique identifier
 
 Everything in the above list are `Primitive type` except Object.  

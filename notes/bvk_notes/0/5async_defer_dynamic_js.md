@@ -1,34 +1,48 @@
 JS Lessons
 ----------
-async defer delay the loading of the js files
+```async defer``` delay the loading of the js files
 
-url: https://javascript.info/script-async-defer
-	 https://flaviocopes.com/javascript-async-defer/
+url: <p>https://javascript.info/script-async-defer</p>
+	 <p>https://flaviocopes.com/javascript-async-defer/</p>
 
-In modern websites, scripts are often “heavier” than HTML: their download size is larger, and processing time is also longer.
+In modern websites, scripts are often “heavier” than HTML: 
+their download size is larger, and processing time is also longer.
 
-When the browser loads HTML and comes across a <script>...</script> tag, it can’t continue building the DOM. 
-It must execute the script right now. 
-The same happens for external scripts <script src="..."></script>: the browser must wait for the script to download, execute the downloaded script, and only then can it process the rest of the page.
+When the browser loads HTML and comes across a \<script>...\</script> tag,
+it can’t continue building the DOM.  
+It must execute the script right now.   
+The same happens for external scripts \<script src="...">\</script>:   
+the browser must wait for the script to download, execute the downloaded script,  
+and only then can it process the rest of the page.  
 
 That leads to two important issues:
 
 	1. Scripts can’t see DOM elements below them, so they can’t add handlers etc.
-	2. If there’s a bulky script at the top of the page, it “blocks the page”. Users can’t see the page content till it downloads and runs:
+	2. If there’s a bulky script at the top of the page, it “blocks the page”.  
+        Users can’t see the page content till it downloads and runs:
 
-There are some workarounds to that. For instance, we can put a script at the bottom of the page. Then it can see elements above it, and it doesn’t block the page content from showing:
-	But this solution is far from perfect. For example, the browser notices the script (and can start downloading it) only after it downloaded the full HTML document. For long HTML documents, that may be a noticeable delay.
+There are some workarounds to that.  
+ For instance, we can put all the scripts at the bottom of the page.  
+ Then it can see elements above it, and it doesn’t block the page content from showing:  
+ But this solution is far from perfect.  
+ For example, the browser notices the script (and can start downloading it)   
+  only after it downloaded the full HTML document.  
+ For long HTML documents, that may be a noticeable delay.
 
-Such things are invisible for people using very fast connections, but many people in the world still have slow internet speeds and use a far-from-perfect mobile internet connection.
-------------------------
+Such things are invisible for people using very fast connections,  
+ but many people in the world still have slow internet speeds and  
+ use a far-from-perfect mobile internet connection.
+
+</hr>
+
 defer
 ---
 The defer attribute tells the browser not to wait for the script. 
 Instead, the browser will continue to process the HTML, build DOM. 
 The script loads “in the background”, and then runs when the DOM is fully built..
 
-In other words:
-	1. Scripts with defer never block the page.
+In other words:  
+	1. Scripts with defer never block the page.  
 	2. Scripts with defer always execute when the DOM is ready (but before DOMContentLoaded event).
 
 	<p>...content before scripts...</p>
@@ -51,30 +65,36 @@ Let’s say, we have two deferred scripts: the long.js and then small.js:
 <script defer src="https://javascript.info/article/script-async-defer/long.js"></script>
 <script defer src="https://javascript.info/article/script-async-defer/small.js"></script>
 
-Browsers scan the page for scripts and download them in parallel, to improve performance. 
-So in the example above both scripts download in parallel. The small.js probably finishes first.
+Browsers scan the page for scripts and download them in parallel, to improve performance.  
+So in the example above both scripts download in parallel.  
+The small.js probably finishes first.  
 
-But the defer attribute, besides telling the browser “not to block”, ensures that the relative order is kept.
+But the defer attribute, besides telling the browser “not to block”, 
+ensures that the relative order is kept.  
 
 <important>
 	So even though small.js loads first, it still waits and runs after long.js executes.
 </important>
 
-That may be important for cases when we need to load a JavaScript library and then a script that depends on it.	
+That may be important for cases when we need to load a JavaScript library and  
+then a script that depends on it.  	
 
 <info>
 	The defer attribute is only for external scripts
 	The defer attribute is ignored if the <script> tag has no src.
-</info>
+</info>  
+
 ---------------------------------------------------------------------------
 async
 -----
-The async attribute is somewhat like defer. It also makes the script non-blocking. But it has important differences in the behavior.
+The async attribute is somewhat like defer.  
+It also makes the script non-blocking. But it has important differences in the behavior.  
 
 The async attribute means that a script is completely independent:
 
-The browser doesn’t block on async scripts (like defer).
-<b>Other scripts don’t wait for async scripts, and async scripts don’t wait for them.</b>
+The browser doesn’t block on async scripts (like defer).  
+<b>Other scripts don’t wait for async scripts, and async scripts don’t wait for them.</b>  
+
 DOMContentLoaded and async scripts don’t wait for each other:
 DOMContentLoaded may happen both 
 	before an async script (if an async script finishes loading after the page is complete) or 
@@ -86,7 +106,8 @@ The DOM and other scripts don’t wait for them, and they don’t wait for anyth
 
 A fully independent script that runs when loaded. As simple, as it can get, right?
 
-Here’s an example similar to what we’ve seen with defer: two scripts long.js and small.js, but now with async instead of defer.
+Here’s an example similar to what we’ve seen with defer:  
+ two scripts long.js and small.js, but now with async instead of defer.
 
 They don’t wait for each other. Whatever loads first (probably small.js) – runs first:
 

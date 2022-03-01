@@ -1,34 +1,28 @@
 {
-  "name": "beginner-javascript",
+  "name": "js-basic-lessons",
   "version": "1.0.0",
-  "description": "beginner js property file",
-  "main": "index.js",
+  "description": "js lessons",
+  "main": ".eslintrc.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/VKRISHNANB/learningjs.git"
+    "url": "git+https://github.com/vkrishnanb-chainsys/js-basic-lessons.git"
   },
-  "author": "",
+  "author": "venkat",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/wesbos/beginner-javascript/issues"
+    "url": "https://github.com/vkrishnanb-chainsys/js-basic-lessons/issues"
   },
-  "homepage": "https://github.com/VKRISHNANB/learningjs.git#readme",
+  "homepage": "https://github.com/vkrishnanb-chainsys/js-basic-lessons#readme",
   "devDependencies": {
-    "babel-eslint": "^9.0.0",
-    "cssnano": "^4.1.10",
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-prettier": "^4.3.0",
-    "eslint-config-wesbos": "0.0.19",
-    "eslint-plugin-html": "^5.0.5",
-    "eslint-plugin-import": "^2.17.3",
-    "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-prettier": "^3.1.0",
-    "eslint-plugin-react": "^7.13.0",
-    "eslint-plugin-react-hooks": "^1.6.0",
-    "prettier": "^1.17.1"
+    "@typescript-eslint/eslint-plugin": "^5.13.0",
+    "@typescript-eslint/parser": "^5.13.0",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0"
   }
 }

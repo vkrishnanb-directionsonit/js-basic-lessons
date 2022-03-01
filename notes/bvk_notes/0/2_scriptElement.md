@@ -4,7 +4,7 @@ marp: true
 <!-- backgroundColor: yellow -->
 <!-- backgroundImage: "url(imgs/bg_light8.jpeg)" -->
 <!-- _color: yellow -->
-![bg cover](imgs/Space.jpeg)
+![bg cover](../imgs/Space.jpeg)
 # JavaScript Notes <!-- fit -->  
 
 ---

@@ -17,7 +17,11 @@ Pagec.html: external js files
 ---
 # Disallow Early Use (no-use-before-define)
 
-In JavaScript, prior to ES6, variable and function declarations are hoisted to the top of a scope, so it's possible to use identifiers before their formal declarations in code. This can be confusing and some believe it is best to always declare variables and functions before using them.
+In JavaScript, prior to ES6, variable and function declarations are hoisted to the top of a scope, 
+so it's possible to use identifiers before their formal declarations in code. 
+This can be confusing and some believe it is best to always declare variables and functions before using them.
 
-In ES6, block-level bindings (let and const) introduce a "temporal dead zone" where a ReferenceError will be thrown with any attempt to access the variable before its declaration.
+In ES6, block-level bindings (let and const) introduce a 
+"temporal dead zone" where a ReferenceError will be thrown 
+with any attempt to access the variable before its declaration.
 

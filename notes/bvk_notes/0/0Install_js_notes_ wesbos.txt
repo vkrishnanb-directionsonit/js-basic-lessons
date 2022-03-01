@@ -3,9 +3,9 @@ JS Lessons
 Install
 	Chrome / Firefox
 	npm - sudo apt install npm
-		> npm -v (6.14)
+		> npm -v (8.5)
 	nodejs - sudo apt install nodejs
-		  > node -v (10.16)
+		  > node -v (16.14)
 		To run node
 		  > node (loads REPL) 
 		REPL - read-eval-print-loop
