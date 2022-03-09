@@ -18,10 +18,10 @@ console.log("20*stry="+(20*stry));
  console.log("strx+stry="+(strx+stry));
 // Multiply and concat right to left
 console.log("strx+strx*stry="+strx+strx*stry); 
-const smarties = 20;
+const sweets = 20;
 const kids = 3;
-const eachKidGets = Math.floor(smarties / kids);
-const dadGets = smarties % kids;
+const eachKidGets = Math.floor(sweets / kids);
+const dadGets = sweets % kids;
 console.log(`Each kids gets ${eachKidGets}`);
 console.log(`Dad gets ${dadGets}`);
 console.log(`0.1+0.2=`+(0.1+0.2));

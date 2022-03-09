@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page A</title>
+    <!-- 
+        "?v=1" this is written only beacuse to download a fresh copy of the css and js files
+         instead of using from the cache of the browser.
+
+        If you mention this query string parameter at the end of your stylesheet 
+        or the js file then it forces the browser to download a new file, 
+        Due to which the recent changes in the .css and .js files are made effetive in 
+        your browser.
+
+        If you dont use this versioning then you may need to clear the cache of refresh the page 
+        in order to view the recent changes in those files.
+
+        Note that you can use any querystring, 'v' is not a must for example:
+
+        "?blah=1" will work as well.
+        
+        Javascript files are often cached by the browser for a lot longer than you might expect.
+
+        This can often result in unexpected behaviour when you release a new version of your JS file.
+
+        Therefore, it is common practice to add a QueryString parameter to the URL for the javascript file. 
+        That way, the browser caches the Javascript file with v=1. 
+        When you release a new version of your javascript file you change the url's to v=2 and 
+        the browser will be forced to download a new copy.
+        
+     -->
+    <script type="text/javascript" src="DemoA.js?v=2"></script>
+    <script type="text/javascript" src="DemoA1.js?v=2"></script>
+</head>
+<body>
+    <script>
+        // console.log('Date = ' + d);
+        // f1();
+        // console.log(o1);
+        // console.log(o2);
+        // console.log(o3);
+
+    </script>
+    <script>
+        // var o41 = { x: "don't change this value" };
+        // var p = inherit(o41);
+        // // console.log(p);
+        // o41 = null;
+        // p = inherit(o41);
+        // console.log(p);
+        // //-------------------------
+        // // The prototype properties of built-in constructors are read-only.
+        // Object.prototype = 0; // Assignment fails silently;
+        // // Object.prototype unchanged
+    </script> 
+    <script>
+    //     var o5 = {} // o inherits object methods from Object.prototype
+    //     console.log("--------------");
+    //     // console.log("o=" + o);
+    //     // console.log(o5);
+    //      o5.x = 1; // and has an own property x.
+    //      console.log(o5);
+    //     var p = inherit(o5); // p inherits properties from o and Object.prototype
+    //     console.log(p);
+    //     p.y = 2; // and has an own property y.
+    //     var q = inherit(p); // q inherits properties from p, o, and Object.prototype
+    //     console.log(q);
+    //     q.z = 3; // and has an own property z.
+    //     // var s = q.toString(); // toString is inherited from Object.prototype
+    //     // console.log(s);
+    //     // console.log("q.x + q.y " + q.x + q.y);
+    //     console.log("q.x + q.y + q.z " + (q.x + q.y + q.z));
+    //     console.log("p.x + p.y + p.z " + (p.x + p.y + p.z));
+    //    console.log("o5.x + o5.y " + (o5.x + o5.y));
+    </script>
+    <script>
+        // var unitcircle = { r: 1 };
+        // var c = inherit(unitcircle); // c inherits the property r
+        // c.x = 1; c.y = 1; // c defines two properties of its own
+        // c.r = 2; // c overrides its inherited property
+        // console.log("unitcircle.r = ");
+        // console.log(unitcircle.r);
+        // console.log("c.r");
+        // console.log(c.r);
+        //  console.log(unitcircle);
+        // console.log(c);
+    </script>
+    <script>
+        //Property Access Errors - A verbose and explicit technique
+        // var len = undefined;
+        // if (book) {
+        //     if (book.subtitle)
+        //     {
+        //         len = book.subtitle.length;
+        //         console.log(len);
+        //     }
+        //     else
+        //         console.log("book.subtitle undefined: property doesn't exist");
+        // }
+        // else
+        //     console.log("book is null");
+        // // A concise and idiomatic alternative to get subtitle length or undefined
+        // var len = book && book.subtitle && book.subtitle.length;
+        // if (len) console.log(len);
+    </script>
+    <script>
+        //deleting Properties
+        // console.log(book.author);
+        // delete book.author; // The book object now has no author property.
+        // console.log(book.author);
+        // console.log(book["main title"]);
+        // delete book["main title"]; // Now it doesn't have "main title", either.
+        // console.log(book["main title"]);
+        // let o6 = { x: 1 }; // o has own property x and inherits property toString
+        // console.log(o6.x);
+        // delete o6.x; // Delete x, and return true
+        // console.log(o6.x);
+        // console.log(o6.toString);
+        // delete o6.x; // Do nothing (x doesn't exist), and return true
+        // delete o.toString; // Do nothing (toString isn't an own property), return true
+        // //delete 1; // Nonsense, but evaluates to true
+    </script>
+    <script>
+        // delete Object.prototype; // Can't delete; property is non-configurable
+        // var a = 1; // Declare a global variable
+        // delete this.a; // Can't delete this property
+        // function f1() { } // Declare a global function
+        // delete this.f1; // Can't delete this property either
+    </script>
+   
+</body>
+</html>

@@ -1,19 +1,20 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PropertyGettersNSetters</title>
     <script src="DemoDPropertyGettersNSetters.js"></script>
-    <script src="DemoB.js"></script>
 </head>
 <body>
     <script >
-        o.data = 100;
-        console.log(o.data);
+        myobject.data = 100;
+        console.log(myobject.data);
     </script>
 
     <script>
-        p = inherit(o);
+        p = inherit(myobject);
         p.data = 1000;
         p.y = 500;
         console.log(p);

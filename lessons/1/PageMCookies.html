@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Create Cookies the Page</title>
+	<!--  
+		You can't set cookies if its not running in a web server.
+
+		file:///C:/Users/me/Desktop/demo/demo.html
+
+		however:
+
+		http://localhost/demo/demo.html works.
+
+		Run the http-server and check
+		>http-server
+	-->
+	<script type="text/javascript">
+		function createCookie() {
+			d1 = new Date();
+			d1.setTime(d1.getTime() + (1 * 24 * 60 * 60 * 1000));
+			document.writeln("Date is:" + d1.toGMTString());
+
+			document.cookie = "key1=Apple; expires=" + d1.toGMTString()+";";
+			document.writeln("<p>cookies: " + document.cookie);
+		}
+	</script>
+
+</head>
+
+<body>
+	<form>
+		<input type="button" value="SaveCookies" onClick="createCookie()">
+	</form>
+</body>
+
+</html>

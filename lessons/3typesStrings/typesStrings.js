@@ -12,17 +12,24 @@ console.log('It Works');
 const my_name = 'NamefieldEmpty'; // Single quote
 const middle = "Gabbbar"; 
 const last = `Singh`; // back tick
+	
+console.log(my_name);
+console.log(middle);
+console.log(last);
 
 // const sentence1 = 'shes's so cool'; // unexpected identifier
 const sentence1 = 'shes\'s so cool'; // single quote
 console.log(sentence1); // she's so cool
 const sentence3 = "shes's so cool";
+console.log(sentence3);
 const sentence = "shes's so \"cool\"";
 console.log(sentence); // she's so "cool"
 
 // with back ticks
 const sentence2 = `shes's so "cool"`;
+console.log(sentence2);
 const sentence4 = `shes\`s so "cool"`; 
+console.log(sentence4);
 
 // multi line String using single quote doesn't work
 /*

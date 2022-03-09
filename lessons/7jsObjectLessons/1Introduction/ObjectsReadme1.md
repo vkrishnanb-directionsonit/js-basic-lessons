@@ -1,19 +1,25 @@
 ﻿---
 marp: true
 ---
+
+url: https://geekiam.io/how-to-use-javascript-classes/ 
+
+---
+
 # Object
 JavaScript’s fundamental datatype is the object.
 An object is an unordered collection of properties, 
-Each of which has a name and a value.
+each of which has a name and a value.
 Property names are strings, hence objects map strings to values
 
 ---
 # prototype
-JavaScript object also inherits the properties of another object,known as its **“prototype.”**
-The methods of an object are typically inherited properties, and this “prototypal inheritance” is a key feature of JavaScript
+JavaScript object also inherits the properties of another object, known as its **“prototype.”**
+The methods of an object are typically inherited properties, 
+and this “prototypal inheritance” is a key feature of JavaScript
 
 ---
-JavaScript objects are **dynamic—properties** can usually be added, and deleted
+**dynamic—properties** can usually be added, and deleted in JavaScript objects.
 Any value in JavaScript that is not a string, a number, true, false, null, or undefined is an object
 And even though strings, numbers, and booleans are not objects, they behave like immutable objects
 
@@ -70,7 +76,8 @@ JavaScript objects are associative arrays
 # delete:
 delete does not remove properties that have a configurable attribute of false.
 Though it will remove configurable properties of non extensible objects.
-Certain properties of built -in objects are non-configurable, as are properties of the global object created by variable declaration and function declaration
+Certain properties of built -in objects are non-configurable, 
+as are properties of the global object created by variable declaration and function declaration
 In strict mode, attempting to delete a non-configurable property causes a TypeError.
 In non - strict mode(and in ECMAScript 3), delete simply evaluates to false in this case:
 

@@ -20,7 +20,8 @@
 			alsoGlobal = 'This is also global!';
 			var notGlobal = 'This is private to scopeFunction!';
 			function subFunction() {
-				console.log(notGlobal); // We can still access notGlobal in this child function.
+				// We can still access notGlobal in this child function.
+				console.log(`Inside subFunction: ${vNotGlobal}`); 
 				stillGlobal = 'No var keyword so this is global!';
 				var isPrivate = 'This is private to subFunction!';
 			}
@@ -31,10 +32,12 @@
 			console.log(global); // outputs: 'this is global'
 		}
 		console.log(global); // outputs: 'this is global'
-		//console.log(alsoGlobal); // generates an error since we haven't run scopeFunction yet.
+		// console.log(alsoGlobal); // Not defined is generated, since we haven't run scopeFunction yet.
+		// console.log(stillGlobal);
 		scopeFunction();
 		console.log(alsoGlobal); // outputs: 'This is also global!';
-		//console.log(notGlobal); // generates an error. not accessible outside the scopeFunction
+		// console.log(notGlobal); // Not defined is generated, not accessible outside the scopeFunction
+		console.log(stillGlobal);
 	</script>
 </body>
 

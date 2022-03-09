@@ -5,52 +5,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Variables!</title>
-  <link rel="stylesheet" href="../base.css">
+  
 </head>
 
 <body>
   <script>
     'use strict'
 
-    // function scoped
     var first = 'west minister';
     console.log(`first: ${first}`);
-    // block scoped
     let age = 300;
     console.log(`Age: ${age}`);
     let cool = true;
     console.log(`cool: ${cool}`);
-    const dog = 'GR'
-    // const Dog = 'Golden Retriever'; // avoid using Upper case in variables
+    const dog = 'Golden Retriever'
+    // const Dog = 'Golden Retriever'; // avoid starting variables with Upper case 
     console.log(`Dog: ${dog}`);
 
     // use strict declared at the beginning of the module will throw the following error
-    cat = 'black'; // Uncaught ReferenceError: cat is not defined at variables.html:25
-    // use strict - forces to declare the variable cat first correct usage is as follows
+    cat = 'black'; // Uncaught ReferenceError: cat is not defined
+    console.log(`cat:${cat}`);
+// use strict - forces to declare the variable cat first correct usage is as follows
     let cat = 'black';
     console.log(`cat:${cat}`);
 
     // variables can have name with lowercase / _(under score) / $
     let _manager = 'John';
-    let $city = 'Chennai'
-    console.log(`Manager:${_manager}`);
-    console.log(`City:${$city}`);
+    let $city = 'Chennai';
     let $_$ = 400;
+    console.log(`Manager: ${_manager}`);
+    console.log(`City: ${$city}`);
+    console.log(`$_$: ${$_$}`);
     // let #_$ = 400; ==> Invalid character
-    console.log(`$_$:${$_$}`);
+    // console.log(`#_$: ${#_$}`);
+
     let _ = 1; // these work , but don't use these - reserved for lib lodash
     let $ = 2; // these work , but don't use these - reserved for jquery
-    console.log(`_:${_}`);
-    console.log(`$:${$}`);
+    console.log(`_: ${_}`);
+    console.log(`$: ${$}`);
 
     // camel case
     const iLovePizza = true;
+    console.log(`iLovePizza: ${iLovePizza}`);
     // UpperCamelCase
     const ILoveToEatHotDogs = false;
+    console.log(`ILoveToEatHotDogs: ${ILoveToEatHotDogs}`);
     // snake case!!
     const this_is_snake_case = 'cool';
+    console.log(`snake_case: ${this_is_snake_case}`);
     // kebab case - not allowed in variables
     // const this-is-kebab-case = 'hot';
+    //   console.log(`kebab_case: ${this-is-kebab-case}`);
 
     first = 'WestIndies';
     console.log(`first: ${first}`);

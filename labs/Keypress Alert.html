@@ -1,13 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Key press</title>
+
+</head>
+
 <body>
-<input type="text" onkeypress="myFunction(event)">
-<p>press any functionkey</p>
-<script>
-function myFunction(e) {
-    alert("keypressed inside the input field is"+" "+e.key);
-}
-</script>
+    <input type="text" onkeypress="myFunction(event)">
+    <p>press any functionkey</p>
+    <script>
+        function myFunction(e) {
+            alert("keypressed inside the input field is" + " " + e.key);
+        }
+    </script>
 
 </body>
+
 </html>

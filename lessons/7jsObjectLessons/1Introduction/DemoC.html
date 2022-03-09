@@ -1,20 +1,23 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enumerating</title>
     <script type="text/javascript" src="DemoC.js?v=2"></script>
 </head>
 <body>
     <!-- Enumerating Properties-->
-    <!--<script>
-        var o = { x: 1, y: 2, z: 3 }; // Three enumerable own properties
-        console.log( o.propertyIsEnumerable("toString")) // => false: not enumerable
-        for (p in o) // Loop through the properties
-            console.log(p + "-" + o[p]); // Prints x, y, and z, but not toString
-           // console.log(p + "-" + o.p);
+    <script>
+        var nos = { x: 1, y: 2, z: 3 }; // Three enumerable own properties
+        console.log( nos.propertyIsEnumerable("toString")) // => false: not enumerable
+        for (item in nos) // Loop through the properties
+            console.log(item + "-" + nos[item]); // Prints x, y, and z, but not toString
+           // console.log(p + "-" + nos.p);
         console.log("-----------------");
     </script>
+    <!--
     <script>
         var o = { x: 1, y: 2, z: 3 };
         var q = inherit(o);

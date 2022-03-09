@@ -29,7 +29,7 @@
     "peacock.color": "#f9e64f",
 
    // auto-save configs
-	"editor.formatOnSave": true,
+	"editor.formatOnSave": false,
 	// turn it off for JS and JSX, we will do this via eslint
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -43,6 +43,5 @@
     "open-in-browser.default": "chrome",
     "editor.wordWrap": "on",
     "diffEditor.wordWrap": "on",
-    "html.format.wrapAttributes": "force-aligned",
     "html.format.wrapLineLength": 80,
 }
