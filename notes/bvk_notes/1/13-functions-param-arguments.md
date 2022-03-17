@@ -5,8 +5,12 @@
 - Arguments are the actual values passed to a function while calling it
 
   ```javascript
-  function calculateBill(billAmount, taxRate) { // here billAmount, taxRate are parameters const total = billAmount + billAmount * taxRate return total; }
-
+  // here billAmount, taxRate are parameters
+  function calculateBill(billAmount, taxRate) {
+     console.log(billAmount + ' - ' + taxRate);
+     const total = billAmount + billAmount * taxRate
+     return total;
+  }
   calculateBill(100, 0.13); // here 100, 0.13 are arguments
   ```
 

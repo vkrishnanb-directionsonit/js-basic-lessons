@@ -1,27 +1,27 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>attributes</title>
-    <link rel="shortcut icon" href="about:blank">
-    <script src="DemoE.js?v=2"></script>
+    <script src="../../scripts/7objects/objects_DemoE.js?v=2"></script>
 </head>
 <body>
-    <script>
+    <!-- <script>
         // Check that the property is there but is nonenumerable
-        console.log( o.x); // => 1
-        console.log(Object.keys(o)); // => []
-        // Now modify the property x so that it is read-only
-        Object.defineProperty(o, "x", { writable: false });
-        // Try to change the value of the property
-        o.x = 2; // Fails silently or throws TypeError in strict mode
-        console.log(o.x); // => 1
-        // The property is still configurable, so we can change its value like this:
-        Object.defineProperty(o, "x", { value: 2 });
-        console.log(o.x); // => 2
-        // Now change x from a data property to an accessor property
-        Object.defineProperty(o, "x", { get: function () { return 0; } });
-        console.log(o.x); // => 0
-    </script>
+        // console.log( o.x); // => 1
+        // console.log(Object.keys(o)); // => []
+        // // Now modify the property x so that it is read-only
+        // Object.defineProperty(o, "x", { writable: false });
+        // // Try to change the value of the property
+        // o.x = 2; // Fails silently or throws TypeError in strict mode
+        // console.log(o.x); // => 1
+        // // The property is still configurable, so we can change its value like this:
+        // Object.defineProperty(o, "x", { value: 2 });
+        // console.log(o.x); // => 2
+        // // Now change x from a data property to an accessor property
+        // Object.defineProperty(o, "x", { get: function () { return 0; } });
+        // console.log(o.x); // => 0
+    </script> -->
 </body>
 </html>

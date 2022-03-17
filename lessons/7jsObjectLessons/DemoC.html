@@ -5,46 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enumerating</title>
-    <script type="text/javascript" src="DemoC.js?v=2"></script>
+    <script type="text/javascript" src="../../scripts/7objects/objects_DemoC.js?v=2"></script>
 </head>
 <body>
     <!-- Enumerating Properties-->
     <script>
-        var nos = { x: 1, y: 2, z: 3 }; // Three enumerable own properties
-        console.log( nos.propertyIsEnumerable("toString")) // => false: not enumerable
-        for (item in nos) // Loop through the properties
-            console.log(item + "-" + nos[item]); // Prints x, y, and z, but not toString
-           // console.log(p + "-" + nos.p);
-        console.log("-----------------");
+        // var nos = { x: 1, y: 2, z: 3 }; // Three enumerable own properties
+        // // console.log( nos.propertyIsEnumerable("toString")) // => false: not enumerable
+        // for (item in nos) // Loop through the properties
+        //     console.log(item + "-" + nos[item]); // Prints x, y, and z, but not toString
+        //    // console.log(p + "-" + nos.p);
+        // console.log("-----------------");
     </script>
-    <!--
+    
     <script>
-        var o = { x: 1, y: 2, z: 3 };
-        var q = inherit(o);
-        q.r = 100;
-        q.s = 200;
-        for (p in q)
-            console.log(p + "-" + q[p]);
-        console.log("-----------------");
-        for (p in q)
-            if (q.hasOwnProperty(p)) console.log(p + "-" + q[p]);
-        console.log("-----------------");
-        for (p in q) {
-            if (typeof q[p] !== "function") console.log(p + "-" + q[p]);
-        }
-    </script>-->
-    <!--<script>
-        var o = { r: 10, s: 20, t: 30, u: 40, v: 50, w: 60, x: 70, y: 80, z: 90 };
-        console.log(o);
-        var q = {};
-        q = extend(q, o);
-        console.log(q);
-    </script>-->
+        // var o = { x: 1, y: 2, z: 3 };
+        // var q = inherit(o);
+        // q.r = 100;
+        // q.s = 200;
+        // for (p in q)
+        //     console.log(p + "-" + q[p]);
+        // console.log("-----------------");
+        // for (p in q)
+        //     if (q.hasOwnProperty(p)) console.log(p + "-" + q[p]);
+        // console.log("-----------------");
+        // for (p in q) {
+        //     if (typeof q[p] !== "function") console.log(p + "-" + q[p]);
+        // }
+    </script>
     <script>
-        var p = { r: 10, s: 20, t: 30, u: 40, v: 50, w: 60, x: 70, y: 80, z: 90 };
-        var q = { a: 100, b: 200, c: 300, d: 400, e: 500, w: 600, x: 700, y: 800, z: 900 };
-        var o = merge(q, p);
-        console.log(o);
+        // var o = { r: 10, s: 20, t: 30, u: 40, v: 50, w: 60, x: 70, y: 80, z: 90 };
+        // console.log(o);
+        // var q = {};
+        // q = createCopy(q, o);
+        // console.log(q);
+    </script>
+    <script>
+        var r = { r: 10, s: 20, t: 30, u: 40, v: 50, w: 60, x: 70, y: 80, z: 90 };
+        var s = { a: 100, b: 200, c: 300, d: 400, e: 500, w: 600, x: 700, y: 800, z: 900 };
+        // var t = merge(r, s);
+        // console.log(t);
+        // var t1 = removeCommonItem(r, s);
+        // console.log(t1);
+        // removeUnCommonItem(r, s);
+        // // console.log(t2);
+        // console.log(r);
+        var t3 = union(r,s);
+        // console.log(t3);
+        var t4 = intersection(r,s);
+        console.log(t4);
     </script>
 </body>
 </html>

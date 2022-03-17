@@ -1,6 +1,7 @@
 ## Functions - Built in
 
--   Function allows us to _group together multiple statements,_ take in some values, perform some operations and return some value.
+-   Function allows us to _group together multiple statements,_ take in some values, perform some operations and 
+- return some value.
     
 -   Functions take in data known as _arguments._
     
@@ -27,6 +28,7 @@
     -   `parseFloat('2.032565') // 2.032565` (converts string to number)
     -   `parseInt('2.032565') // 2` (converts string to number as integer)
     -   Many date functions are also present. e.g. `Date.now()` returns no. of milliseconds since January 1, 1970 00:00:00 UTC.
+    -   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
     -   DOM functions:
         -   Example:
             

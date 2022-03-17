@@ -26,9 +26,9 @@ Here we will learn about **Debugging Tools**
               // For this data, you get below output in console:
               
               const people = [
-                { name: "Wes", cool: true, country: "Canada" },
-                { name: "Scott", cool: true, country: "Merica" },
-                { name: "Snickers", cool: false, country: "Dog Country" }
+                { name: "John", cool: true, country: "Canada" },
+                { name: "Scott", cool: true, country: "USA" },
+                { name: "Jimmy", cool: false, country: "Rajapalayam" }
               ];
               
               people.forEach((person, index) => {

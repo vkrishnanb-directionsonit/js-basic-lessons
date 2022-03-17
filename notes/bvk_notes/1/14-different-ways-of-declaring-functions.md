@@ -2,7 +2,8 @@
 
 - Functions are **First class citizens:**
 
-  - It means JavaScript functions are values in themselves. They can be stored in variables and passed into other functions, just like any other piece of data in JavaScript. (see 3rd example below)
+  - It means JavaScript functions are values in themselves. 
+  - They can be stored in variables and passed into other functions, just like any other piece of data in JavaScript. (see 3rd example below)
 
 - **With function keyword**
 

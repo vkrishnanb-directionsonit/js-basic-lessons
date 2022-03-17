@@ -7,8 +7,8 @@
 * If o and p have a property by the same name, o's property is overwritten.
 * This function does not handle getters and setters or copy attributes.
 */
-function extend (o, p) {
-	for (prop in p) { // For all props in p.
+function createCopy (o, p) {
+	for (var prop in p) { // For all props in p.
 		o[prop] = p[prop] // Add the property to o.
 	}
 	return o
@@ -19,7 +19,7 @@ function extend (o, p) {
 * This function does not handle getters and setters or copy attributes.
 */
 function merge (o, p) {
-    for (prop in p) { // For all props in p.
+    for (var prop in p) { // For all props in p.
         if (prop in o) continue
         o[prop] = p[prop] // Add the property to o.
 	}
@@ -29,8 +29,8 @@ function merge (o, p) {
 * Remove properties from o if there is not a property with the same name in p.
 * Return o.
 */
-function restrict (o, p) {
-	for (prop in o) { // For all props in o
+function removeUnCommonItem (o, p) {
+	for (var prop in o) { // For all props in o
 		if (!(prop in p)) delete o[prop] // Delete if not in p
 	}
 	return o
@@ -39,10 +39,11 @@ function restrict (o, p) {
 * For each property of p, delete the property with the same name from o.
 * Return o.
 */
-function subtract (o, p) {
-	for (prop in p) { // For all props in p
-		delete o[prop] // Delete from o (deleting a
-		// nonexistent prop is harmless)
+function removeCommonItem (o, p) {
+	for (var prop in p) { // For all props in p
+		 if (o.hasOwnProperty(prop)) {
+		delete o[prop] // Delete from o (deleting a nonexistent prop is harmless)
+		}
 	}
 	return o
 }
@@ -50,13 +51,13 @@ function subtract (o, p) {
 * Return a new object that holds the properties of both o and p.
 * If o and p have properties by the same name, the values from o are used.
 */
-function union (o, p) { return extend(extend({}, o), p) }
+function union (o, p) { return createCopy(createCopy({}, o), p) }
 /*
 * Return a new object that holds only the properties of o that also appear
 * in p. This is something like the intersection of o and p, but the values of
 * the properties in p are discarded
 */
-function intersection (o, p) { return restrict(extend({}, o), p) }
+function intersection (o, p) { return removeUnCommonItem(createCopy({}, o), p) }
 /*
 * Return an array that holds the names of the enumerable own properties of o.
 */

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>functions</title>
+    <script type="text/javascript"
+        src="../../scripts/2functions/demoA.js"></script>
+
+</head>
+
+<body>
+    <p><label for="firsttxt">X :</label> <input id="firsttxt" type="text"
+            placeholder="enter a number" /></p>
+    <p><label for="secondtxt">X :</label> <input id="secondtxt" type="text"
+            placeholder="enter a number" /></p>
+    <p> <input type="button" value="Add nos" onclick="add()" />
+        <input type="button" value="+" onclick="sum()" />
+        <input type="button" value="Addition"
+            onclick="addition(document.getElementById('firsttxt').value,document.getElementById('secondtxt').value)" />
+    </p>
+    <p>
+        <input  type="button" value="Problem1" onclick="printuptohundred()" />
+        <input  type="button" value="Problem2" onclick="printdigits(document.getElementById('firsttxt').value)" />
+    </p>
+    <div id="result"></div>
+</body>
+
+</html>
