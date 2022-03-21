@@ -32,7 +32,7 @@ Here we will learn about **Debugging Tools**
               ];
               
               people.forEach((person, index) => {
-                console.table(person.name);
+                console.table(index, person.name, person.cool, person.country)
               });
             
             ```
@@ -110,7 +110,8 @@ Here we will learn about **Debugging Tools**
     
     ```
     
-    In this above example, `doesntExist` function doesn't exist, which will cause an error, when we run the `go` function:
+    In this above example, `doesntExist` function doesn't exist, 
+which will cause an error, when we run the `go` function:
     
     `go()`
     
@@ -124,7 +125,10 @@ Here we will learn about **Debugging Tools**
     
     ```
     
-    The error says that this error occurred at line 32 in function `greet`. `greet` was called by `go` at line 37. The `anonymous 1:1` comes as we ran it from our console, else it would have shown the line no. from where we would have called the `go` function in code.
+    The error says that this error occurred at line 32 in function `greet`. 
+`greet` was called by `go` at line 37. 
+The `anonymous 1:1` comes as we ran it from our console, 
+else it would have shown the line no. from where we would have called the `go` function in code.
     
     3.  **Grabbing Elements**
     

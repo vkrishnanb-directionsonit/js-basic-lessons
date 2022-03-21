@@ -1,6 +1,6 @@
 /* eslint-disable semi */
 
-function CarModule () {
+function Car () {
   let milesDriven = 0;
   let speed = 0;
   // In this case, we instead use the "this" keyword,
@@ -13,7 +13,7 @@ function CarModule () {
   this.getSpeed = () => speed;
 }
 
-const testCarModule = new CarModule();
+const testCarModule = new Car();
 testCarModule.speed = 100; // adds a new field to the object
 testCarModule.milesDriven = 10; // adds a new field to the object
 console.log('Miles: ' + testCarModule.getMilesDriven());
@@ -23,7 +23,7 @@ console.log('Miles: ' + testCarModule.getMilesDriven());
 console.log('Speed: ' + testCarModule.getSpeed());
 // ------------
 /*
-class EcarModule {
+class Ecar {
   constructor() {
     let milesDriven = 0;
     let speed = 0;
@@ -38,7 +38,7 @@ class EcarModule {
   }
 }
 
-const testEcarModule = new EcarModule();
+const testEcarModule = new Ecar();
 testEcarModule.speed = 100; // adds a new field to the object
 testEcarModule.milesDriven = 10; // adds a new field to the object
 console.log('Miles: ' + testEcarModule.getMilesDriven());

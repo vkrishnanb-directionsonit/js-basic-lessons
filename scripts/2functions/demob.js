@@ -1,7 +1,12 @@
-const maxvalue = Math.max(10, 12); 
-console.log(maxvalue);
-const minvalue = Math.min(10, 12); 
-console.log(minvalue);
+/* eslint-disable no-mixed-spaces-and-tabs */
+/* eslint-disable no-tabs */
+/* eslint-disable no-unexpected-multiline */
+/* eslint-disable semi */
+/* *
+const maxvalue = Math.max(10, 12)
+console.log(maxvalue)
+const minvalue = Math.min(10, 12)
+console.log(minvalue)
 
 // function add (...value: number[]) {
 //     for(var item in value) {
@@ -38,3 +43,71 @@ calculateBill(100, 0.66)
 
 calculateBill(100, undefined, 0.66) // here the taxRate will default to 0.13 as
 // we have passed undefined to it and the tipRate will be 0.66 as passed
+*/
+// -----------------------
+// const doc = doctorize('venkat')
+// console.log(doc)
+// function doctorize (firstName) {
+//   return `Dr. ${firstName}`
+// }
+
+// Anon Function
+// function (firstName) {
+//     return `Dr. ${firstName}`;
+// }
+
+/* Function Expression */
+
+// const doctorize = function (firstName) {
+//   return `Dr. ${firstName}`
+// }
+// const doc = doctorize('venkat')
+// console.log(doc)
+// ----------------------
+/* Arrow Functions */
+// const inchToCM = inches => {
+//   console.log(inches);
+//   return inches * 2.54;
+// };
+
+// const resultcm = inchToCM(10)
+// console.log(resultcm)
+
+// const funcA = () => {
+//   console.log('Hi');
+// };
+// funcA();
+// const add = (a, b = 3) => a + b;
+// const inTocm = (inches) => inches * 2.54;
+
+// console.log(add(100));
+// console.log(inTocm(25));
+
+// const makeAPerson = (first, last) => ({ name: `${first} ${last}`, age: 0 });
+// const person = makeAPerson('venkat', 'krishnan');
+// console.log(person);
+
+/* **IIFE: Immediately Invoked Function Expression** */
+// (function(age) {
+//   console.log(`You are cool, and your age is ${age}`);
+//   return `You are cool, and your age is ${age}`;
+// })(10);
+
+// ----------------------
+const employee = {
+  name: 'Venkat Krishnan',
+  // method
+  sayHi: function () {
+	  console.log(`Hi!!! ${this.name}`);
+	  return `Hi ${this.name}`;
+  },
+  print: () => {
+    console.log('Hello employee');
+  },
+  yellHi () {
+    console.log(`HI ${this.name.toUpperCase()}`);
+  }
+};
+employee.sayHi();
+employee.print();
+employee.yellHi();

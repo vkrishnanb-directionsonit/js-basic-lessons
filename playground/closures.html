@@ -1,40 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title></title>
-  <link rel="stylesheet" href="/themes/base.css">
+  <title>closure</title>
 </head>
 
 <body>
   <script>
+    /*
+    The ability to access the outer level scoped data from 
+    the inner level scoped code even after the function is terminated
+    */
     // function outer() {
     //   const outerVar = 'Hey I am the outer Var!';
+    //   console.log(outerVar);
     //   function inner() {
     //     const innerVar = 'Hey I am an inner var!';
-    //     console.log(innerVar);
-    //     console.log(outerVar);
+    //     console.log(innerVar); 
+    //     console.log(outerVar); // closure - captured variable
     //   }
+    //   // console.log(innerVar); // Uncaught ReferenceError: innerVar is not defined
+    //   // inner();
     //   return inner;
     // }
+    // // outer();
+    // // outer.inner();
 
     // const innerFn = outer();
     // innerFn();
+    // innerFn = null;
 
-    function createGreeting(greeting = '') {
-      const myGreet = greeting.toUpperCase();
-      return function (name) {
-        return `${myGreet} ${name}`;
-      }
-    }
+    // function createGreeting(greeting = '') {
+    //   const myGreet = greeting.toUpperCase();
+    //   return function (name) {
+    //     return `${myGreet} ${name}`;
+    //   }
+    // }
 
-    const sayHello = createGreeting('hello');
-    const sayHey = createGreeting('hey');
-    console.log(sayHello('wes'));
-    console.log(sayHello('kait'));
-    console.log(sayHey('kait'));
+    // const sayHello = createGreeting('hello');
+    // const sayHey = createGreeting('hey');
+    // console.log(sayHello('wes'));
+    // console.log(sayHello('kait'));
+    // console.log(sayHey('kait'));
 
 
     function createGame(gameName) {
@@ -44,12 +52,12 @@
         return `Your name ${gameName} score is ${score}`;
       }
     }
-
     const hockeyGame = createGame('Hockey');
     const soccerGame = createGame('Soccer');
-
-
+    hockeyGame();
+    hockeyGame();
+    hockeyGame();
+    soccerGame();
   </script>
 </body>
-
 </html>

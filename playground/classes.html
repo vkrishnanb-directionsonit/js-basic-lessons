@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Classes</title>
-  <link rel="stylesheet" href="/themes/base.css">
 </head>
 
 <body>
@@ -20,41 +19,72 @@
       }
 
       // static property
-      static toppings = ['pepperoni', 'cheese'];
+      static extraToppings = ['pepperoni', 'cheese'];
 
-      // static method
-      static randomPizza() {
-        return new Pizza()
+      //  static method
+      static sayThanyou() {
+        console.log('ThankYou!!!');
+      }
+      // factory method
+      static createNewPizza() {
+        return new Pizza();
       }
 
-      // prototype method (almost always this)
+      // // prototype method (almost always this)
       eat() {
-        console.log('CHOMP');
         console.log(this.toppings);
         console.log(this.slices);
       }
 
       // instance property
       slices = 10;
-
-      // instance method
-      hi = () => {
-        console.log('Hiiii');
-        console.log(this);
-      }
-
-      // Getter Property
-      get length() {
+     // Getter Property
+     get length() {
         return this.slices;
-      }
-
+     }
+     set length(value) {
+        this.slices = value;
+     }
       // Private Fields can only be modified inside a class
       #bankBalance = 10000;
+      get balance() {
+        return this.#bankBalance;
+     }
+     set balance(value) {
+        this.#bankBalance = value;
+     }
+      // instance method
+      getCokeOrPepsi = () => {
+        console.log('Coke');
+        console.log('Pepsi');
+        console.log(this);
+      }
     }
 
-    const myPizza = new Pizza(['onions'], 'Wes Bos');
-
+    // const myPizza = new Pizza();
+    const myPizza = new Pizza(['onions'], 'Venkat');
     console.log(myPizza);
+    myPizza.eat();
+    myPizza.toppings = ['Carrot', 'Almonds', 'Lobster']
+    console.log(myPizza.toppings);
+    console.log(Pizza.extraToppings);
+    Pizza.extraToppings = ['onions', 'Lettuce'];
+    console.log(Pizza.extraToppings);
+   Pizza.sayThanyou();
+   console.log(myPizza.length);
+   myPizza.length = 8;
+   console.log(myPizza.length);
+   myPizza.slices = 12;
+   console.log( myPizza.length);
+   myPizza.getCokeOrPepsi();
+   console.log( myPizza.balance);
+   myPizza.balance = 5000;
+   console.log( myPizza.balance);
+   myPizza.bankBalance = 2000;
+   console.log( myPizza.balance);
+   // myPizza.#bankBalance = 2000;
+   // console.log( myPizza.balance);
+
   </script>
 </body>
 

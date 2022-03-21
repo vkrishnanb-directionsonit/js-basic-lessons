@@ -1,38 +1,41 @@
-const butts = document.querySelector('.butts');
-const coolButton = document.querySelector('.cool');
+/* eslint-disable semi */
+const btn1 = document.querySelector('.btn1');
+const coolButton = document.querySelector('.btn2');
 
-function handleClick() {
+function handleClick () {
   console.log('🐛 IT GOT CLICKED!!!');
 }
+btn1.addEventListener('click', handleClick);
 
 const hooray = () => console.log('HOORAY!');
-
-butts.addEventListener('click', function() {
-  console.log('Im an anon!');
-});
 coolButton.addEventListener('click', hooray);
 
-butts.removeEventListener('click', handleClick);
+btn1.removeEventListener('click', handleClick);
 
-// Listen on multiple items
+// btn1.addEventListener('click', function () {
+//   console.log('Im an anon!');
+// });
+
+// // Listen on multiple items
 const buyButtons = document.querySelectorAll('button.buy');
 
 function handleBuyButtonClick(event) {
   console.log('You clicked a button!');
-  const button = event.target;
-  // console.log(button.textContent);
-  // console.log(parseFloat(event.target.dataset.price));
-  console.log(event.target);
+  const button = event.target; // reference to the DOM element
+  console.log(button.textContent);
+  console.log('Price: ' + parseFloat(event.target.dataset.price));
+  // console.log(event.target);
   console.log(event.currentTarget);
   console.log(event.target === event.currentTarget);
+  console.log(event.bubbles);
   // Stop this event from bubbling up
   // event.stopPropagation();
 }
 
-buyButtons.forEach(function(buyButton) {
-  buyButton.addEventListener('click', handleBuyButtonClick);
+buyButtons.forEach(function(buyBtn) {
+  buyBtn.addEventListener('click', handleBuyButtonClick);
 });
-
+// Event bubbling from Window to the buttons
 window.addEventListener(
   'click',
   function(event) {
@@ -49,5 +52,6 @@ const photoEl = document.querySelector('.photo');
 
 photoEl.addEventListener('mouseenter', e => {
   console.log(e.currentTarget);
+  console.log(event.bubbles);
   console.log(this);
 });

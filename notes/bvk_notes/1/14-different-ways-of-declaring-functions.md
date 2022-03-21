@@ -7,7 +7,9 @@
 
 - **With function keyword**
 
-  _Important:_ These are **hoisted**, meaning JavaScript 'hoists' or puts them at the top of the file. So if we try to run a function defined with function keyword before it is defined/ above its definition, there's no error and the function is executed successfully.
+  _Important:_ These are **hoisted**, meaning JavaScript 'hoists' or puts them at the top of the file. 
+So if a function is defined with the _function_ keyword, and if we try to run it  before it is defined ( above its definition), 
+then there's no error and the function is executed successfully.
 
   ```javascript
   function doctorize(firstName) {
@@ -28,7 +30,9 @@
 
 - **Function Expression**
 
-  _Important:_ These are **not hoisted**, meaning JavaScript doesn't put them at the top of the file. So if we try to run a function not defined with function keyword before it is defined/ above its definition, there's an error and the function fails to execute.
+  _Important:_ These are **not hoisted**, meaning JavaScript doesn't put them at the top of the file. 
+ so if a function is not defined with the function keyword, and if we try to run it  before it is defined ( above its definition), 
+then there's an error and the function fails to execute.
 
   ```javascript
   const doctorize = function(firstName) {
@@ -49,9 +53,12 @@
       return inches * 2.54;
     };
 
-    // Implicit return: const add = (a, b = 3) => a + b; const inchToCM = (inches) => inches * 2.54;
+    // Implicit return: 
+    const add = (a, b = 3) => a + b; 
+    const inchToCM = (inches) => inches * 2.54;
 
-    // In case of only 1 parameter, we can omit the () around it const inchToCM = inches => inches * 2.54;
+    // In case of only 1 parameter, we can omit the () around it 
+    const inchToCM = inches => inches * 2.54;
     ```
 
   - Implicitly returning an object:
@@ -110,13 +117,11 @@ HTML:
 	        Click Me!
         </button>
    </body>
-
-
-
-
-
+```
+```
      Javascript:
-        // Click Callback const button = document.querySelector('.clickMe');
+        // Click Callback 
+  const button = document.querySelector('.clickMe');
 
         function handleClick() { console.log('Great Clicking!!'); }
 
@@ -124,5 +129,6 @@ HTML:
 
         button.addEventListener('click', function() { console.log('Nice Job!!!'); }); // everytime we click the button, the function inside is run.
 
-        // Timer Callback setTimeout(() => { console.log('DONE! Time to eat!'); }, 1000); // it runs the console.log after each 1 sec or 1000 milliseconds
+        // Timer Callback 
+  setTimeout(() => { console.log('DONE! Time to eat!'); }, 1000); // it runs the console.log after each 1 sec or 1000 milliseconds
 ```
