@@ -1,1 +1,0 @@
-this is needed for yoman to generate the src folder.

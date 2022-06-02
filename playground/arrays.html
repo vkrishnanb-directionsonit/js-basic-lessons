@@ -16,33 +16,43 @@
     console.log(names[names.length - 1]);
 
     names.push('lux');
-    console.log(names);
-    const names2 = [...names, 'lux'];
+    console.log('push:' + names);
+    const names2 = [...names, 'sun'];
+    console.log('names2:' + names);
     names.unshift('poppy');
-    console.log(names);
-    const names3 = ['poppy', ...names];
-    console.log(names3);
+    console.log('unshift:' + names);
+    // spread
+    const names3 = ['raj', ...names];
+    console.log('names3:' + names3);
 
-    const bikes = ['bianchi', 'miele', 'panasonic', 'miyata'];
+    // slice()
+    const bikes = ['bianchi', 'miele', 'panasonic', 'miyata','re'];
+    console.log('bikes: ' + bikes);
+
+    const b1 = [...bikes.slice(0, 2)];
+    console.log('b1: ' + b1);
+    const b2 = [...bikes.slice(3)]; // from the 3rd index
+ console.log('b2: ' + b2);
     const newBikes = [
       ...bikes.slice(0, 2),
       'benotto',
-      ...bikes.slice(2)
+      ...bikes.slice(3)
     ];
+    console.log('newBikes: ' + newBikes);
 
     const newBikes2 = [
-      ...newBikes.slice(0, 3),
+      ...newBikes.slice(0, 2),
       ...newBikes.slice(4)
     ];
-    console.log(newBikes2);
+    console.log('newBikes2: ' + newBikes2);
 
     //
     const comments = [
-      { text: 'Cool Beans', id: 123 },
-      { text: 'Love this', id: 133 },
-      { text: 'Neato', id: 233 },
+      { text: 'Cool Place', id: 123 },
+      { text: 'Love Javascript', id: 133 },
+      { text: 'RE', id: 233 },
       { text: 'good bikes', id: 333 },
-      { text: 'so good', id: 433 },
+      { text: 'Chennai', id: 433 },
     ];
 
     function deleteComment(id, comments) {
@@ -56,33 +66,50 @@
       // return our new array
     }
 
+
     const kaitIndex = names.findIndex(name => name === 'kait');
-    const newNamesWithOutKait = [
-      // get everything up to kait index
-      ...names.slice(0, kaitIndex),
-      // everything after Kait index
-      ...names.slice(kaitIndex + 1)
-    ];
-    console.log(newNamesWithOutKait);
+    console.log('kaitIndex: ' + kaitIndex);
+    function deleteName(nametodelete, data) {
 
-    // const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      const indexOfname = data.findIndex(n => n === nametodelete);
+        const newArray =[
+            ...names.slice(0, indexOfname),
+            ...names.slice(indexOfname+1)
+        ];
+      return newArray;
+    };
+    // console.log(' Names: ' + names);
 
+    const deletedNames = deleteName('kait', names);
+    console.log('Deleted Names: ' + deletedNames);
+    // console.log('newNamesWithOutKait:' + names)
+    // const newNamesWithOutKait = [
+    //   // get everything up to kait index
+    //   ...names.slice(0, kaitIndex),
+    //   // everything after Kait index
+    //   ...names.slice(kaitIndex + 1)
+    // ];
+    // console.log(newNamesWithOutKait);
+
+    const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+    console.log(numbers);
+    numbers.splice(3, 2); // from the 3rd index delete the next 2 values
+    // (method) Array<number>.splice(start: number, deleteCount?: number): 
     // console.log(numbers);
-    // numbers.splice(3, 2);
-    // console.log(numbers);
-
+ // Immutable - THEY DO NOT CHANGE THE ORIGINAL DATA
+    const pizzaSlice = numbers.slice(2, 4); // start and end index
+    console.log('pizzaSlices: ' + pizzaSlice);
+    console.log('Original Numbers: ' + numbers);
     // // Mutation Methods - DO CHANGE THE ORIGINAL DATA
     // const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-    // // anytime you want to use a mutation method and NOT mutate the orignal array
-    // // we need to take a copy of the array
-    // const numbersReversed = [...numbers].reverse();
-    // console.log(numbersReversed);
-    // // numbers.reverse();
-    // console.log(numbers);
-    // // Immutable - THEY DO NOT CHANGE THE ORIGINAL DATA
-    // const pizzaSlice = numbers.slice(2, 4);
-    // console.log(pizzaSlice);
-    // console.log(numbers);
+    numbers.reverse();
+    console.log(numbers);
+    
+     // anytime you want to use a mutation method and NOT mutate the orignal array
+    // we need to take a copy of the array
+    const numbersReversed = [...numbers].reverse();
+    console.log(numbersReversed);
 
   </script>
 </body>
