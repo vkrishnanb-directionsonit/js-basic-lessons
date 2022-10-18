@@ -9,8 +9,7 @@
 - **With function keyword**
 
   _Important:_ These are **hoisted**, meaning JavaScript 'hoists' or puts them at the top of the file. 
-So if a function is defined with the _function_ keyword, and if we try to run it  
-before it is defined ( above its definition), 
+So if a function is defined with the _function_ keyword, and if we try to run it before it is defined ( above its definition), 
 then there's no error and the function is executed successfully.
 
   ```javascript
