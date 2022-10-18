@@ -1,6 +1,6 @@
 ## Variables and statements
 
-Semicolons used to end a statement. 
+Semicolons used to end a statement.  
 You can choose to not to write them (because there is ASI: Automatic Semicolon Insertion in Javascript).
 
 ---
@@ -8,26 +8,29 @@ You can choose to not to write them (because there is ASI: Automatic Semicolon I
 
 **var, let, const**
 
-`var first = 'John';`
+`var first_v1 = 'John';`
 
-`let first = 'John';`
+`let first_v2 = 'John';`
 
-`const first = 'John';`
+`const first_v3 = 'John';`
 
 (here value is 'John')
 
 ---
--   `let` and `const` were introduced in ES6 (newer). since 2016    
+-   `let` and `const` were introduced in ES6 (newer-since 2016)    
 -   `var` and `let` can be updated but not `const`.
     
     ```javascript  
       var x = 'hey';  
+	  console.log(x);
       x = 'hi';  
-      
-      let cool = true;  
+      console.log(x);
+      let cool = true; 
+	  console.log(cool);
       cool = false;  
-      
+      console.log(cool);
       const age = 10;  
+	  console.log(age);
       age = 11; // wrong: throws error 
     ```
 ---
@@ -35,19 +38,19 @@ You can choose to not to write them (because there is ASI: Automatic Semicolon I
 -   In **strict mode**, define a variable first before assigning a value to it.
     
     ```javascript  
-      dog = 'snickers'; // bad coding, don't do this
-      console.log(dog); // snickers (no error) 
+      pet = 'snickers'; // bad coding, don't do this
+      console.log(pet); // snickers (no error) 
       
       'use strict';
-      dog = 'snickers'; // error: dog is not defined
+      pet = 'snickers'; // error: pet is not defined
     ```
--   If we write `var dog;` dog is _undefined.
+-   If we write `var pet; console.log(pet);` Here pet is not defined.
 
 ---
     
 -   **Scoping:**
     -   **var** : _function scoped_ (only available inside parent functions)
-    -   **let** and **const** : _block scoped_ (available inside a block denoted by _{ }_ )
+    -   **let** and **const** : _block scoped_ (available inside a block denoted by \{ } )
         
 -   **Opinion (what to use):** 
     - Use `const` by default; 
@@ -63,7 +66,7 @@ You can choose to not to write them (because there is ASI: Automatic Semicolon I
     -   If a variable is multi-word, you can use:
         -   Camel-case:  `let iLovePizza = true;`
         -   Upper Camel case (in case of classes):  `ILovePizza`
-        -   Snake case: `let i_love_pizza=true;`
+        -   Snake case: `let i_love_pizza = true;`
     - _ (underscore)  is used by the helper lib called `lodash` (https://lodash.com/)
         - **Lodash**: A modern JavaScript utility library delivering modularity, performance & extras.
     - $ is used by `jQuery`
@@ -72,12 +75,13 @@ You can choose to not to write them (because there is ASI: Automatic Semicolon I
 ---
 # Disallow Early Use (no-use-before-define)
 
-In JavaScript, prior to ES6, variable and function declarations are hoisted to the top of a scope, 
-so it's possible to use identifiers before their formal declarations in code. 
-This can be confusing and some believe it is best to always declare variables and functions before using them.
+In JavaScript, prior to ES6, variable and function declarations are hoisted to the top of a scope,  
+so it's possible to use identifiers before their formal declarations in code.  
+This can be confusing and some believe it is best to always declare  
+ variables and functions before using them.  
 
-In ES6, block-level bindings (let and const) introduce a 
-"temporal dead zone" where a ReferenceError will be thrown 
-with any attempt to access the variable before its declaration.
+In ES6, block-level bindings (let and const) introduce a   
+"temporal dead zone" where a `ReferenceError` will be thrown   
+with any attempt to access the variable before its declaration.  
 
 

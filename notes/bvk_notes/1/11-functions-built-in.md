@@ -1,11 +1,11 @@
 ## Functions - Built in
 
--   Function allows us to _group together multiple statements,_ take in some values, perform some operations and 
-- return some value.
+-   Function allows us to _group together multiple statements,_ take in some values,  
+     perform some operations and return some value.
     
 -   Functions take in data known as _arguments._
     
--   Function may or may not _return_ a value.
+-   Function `may` or `may not` _return_ a value.
     
 -   Example:
     
@@ -27,7 +27,8 @@
     -   `console.log('hey');` returns `undefined` , logs `hey`.
     -   `parseFloat('2.032565') // 2.032565` (converts string to number)
     -   `parseInt('2.032565') // 2` (converts string to number as integer)
-    -   Many date functions are also present. e.g. `Date.now()` returns no. of milliseconds since January 1, 1970 00:00:00 UTC.
+    -   Many date functions are also present. 
+            e.g. `Date.now()` returns no. of milliseconds since January 1, 1970 00:00:00 UTC.
     -   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
     -   DOM functions:
         -   Example:
@@ -45,13 +46,11 @@
             
         -   Mobile only functions e.g. `navigator.vibrate()`
             
--   In case of doubts, always refer MDN Docs.
-    
+-   In case of doubts, always refer MDN Docs.    
 -   Other Examples:
     
     ```javascript
-      scrollTo(0, 200); // scrolls to (x, y) position in page
-      
+      scrollTo(0, 200); // scrolls to (x, y) position in page      
       scrollTo({
       	top: 500,
       	left: 0,

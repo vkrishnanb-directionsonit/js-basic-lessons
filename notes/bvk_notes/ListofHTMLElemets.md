@@ -29,7 +29,9 @@ Don’t mark up your document based on how it should look – **mark it up based
 
 ---
 # Note: 
-It is important to understand that both \<div> and \<p> are block-level elements which means that most browsers will treat them in a similar fashion.  
+It is important to understand that both \<div> and \<p> are  
+block-level elements which means that most browsers 
+ will treat them in a similar fashion.  
 Major web browsers will render  
   A \<p> tag with margin above and below the paragraph.   
   A \<div> tag will be rendered without any margin at all.

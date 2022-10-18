@@ -1,0 +1,58 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>jqueryA</title>
+    <!--<script src="jquery-3.6.1.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <div>
+        <label for="txt1" id="lbltxt1">Name</label>
+        <input type="text" id="txt1" placeholder="enter name" />
+    </div>
+    <div>
+        <label for="txt2" id="lbltxt2">City</label>
+        <input type="text" id="txt2" placeholder="enter City" />
+    </div>
+    <div>
+        <label for="txt3" id="lbltxt3">State</label>
+        <input type="text" id="txt3" placeholder="enter State" />
+    </div>
+    <input type="submit" id="btn1" value="Hitme! ID selector" />
+
+    <p>
+        Ice cream is a mixture of milk, cream, sugar, and sometimes
+        other ingredients that has been frozen into a soft, creamy
+        delight using special techniques
+    </p>
+    <button>Hide - Element Selector</button>
+
+
+    <script>
+        $(document).ready(function () {
+
+        });
+    </script>
+    <script>
+        //$(document).ready(function () {
+        //    $("#txt3").hide()
+        //});
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                //$("#txt3").hide();
+                //$(this).hide();
+                //$("*").hide();
+                $("#txt3").toggle();
+
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("p").hide();
+            });
+        });
+    </script>
+</body>
+</html>

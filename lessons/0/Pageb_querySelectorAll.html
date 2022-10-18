@@ -4,20 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>QuerySelector</title>
 </head>
 
 <body>
-    <p>
-        This is the first paragraph
-    </p>
-    <p>
-        This is the Second paragraph
-    </p>
+    <p> This is the first paragraph</p>
+    <p> This is the Second paragraph </p>
     <script>
         const p = document.querySelectorAll('p');
         console.log(p);
     </script>
+    <div id="myDiv">Hello!</div>
+    <script type="text/javascript" language="javascript">
+        console.log(myDiv.innerText);
+        myElement = document.getElementById("myDiv");
+        console.log('innerText: ' + myElement.innerText);
+        console.log('innerHTML: ' + myElement.innerHTML);
+        //document.getElementById('myDiv').innerHTML = 'Welcome JavaScript!'
+        myElement.innerHTML = 'Welcome JavaScript!'
+        console.log('innerText: ' + myElement.innerText);
+    </script>
 </body>
-
 </html>

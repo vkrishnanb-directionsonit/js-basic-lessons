@@ -12,21 +12,20 @@
 	<p><a href="PageKWelcome.html" target="_blank">Open window!</a>
 	<p><a href="http://www.google.com" target="_blank">Open Google</a>
 	<p><button onClick="closeAll()">Close Them</button>
-		<script type="text/javascript">
-			function openWindow() {
-				 myWindow = window.open("http://www.google.com", "Page2", "height=300,width=400");
-				//without address
-				//  w1 = window.open("http://www.google.com", "P3", "menubar=1");
+	<script type="text/javascript">
+		function openWindow() {
+			//myWindow = window.open("http://www.google.com", "Page2",	"height=300,width=400");
+			//without address
+			w1 = window.open("http://www.google.com", "P3", "menubar=1");
 
-				// w2 = window.open("http://www.google.com", "P4", "width=300,status=0,toolbar=0");
-			}
-			function closeAll() {
-				myWindow.close();
-				// w1.close();
-				// w2.close();
-			}
-
-		</script>
+            //w2 = window.open("http://www.google.com", "P4", "width=300,status=1,titlebar=0");
+		}
+		function closeAll() {
+			myWindow.close();
+			// w1.close();
+			 //w2.close();
+		}
+	</script>
 </body>
 
 </html>

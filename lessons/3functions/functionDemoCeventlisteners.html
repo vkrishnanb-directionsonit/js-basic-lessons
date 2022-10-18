@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event listeners</title>
+</head>
+<body>
+    <button class="clickMe">Click Me!</button>
+    <p>
+        <input type="button" value="stop" onClick="stopInterval()" />
+    </p>
+   
+    <script>
+        const button = document.querySelector('.clickMe');
+        function handleClick() { console.log('Great Clicking!!'); }
+        // registering the event handler ('handleClick()') with the event ('click')
+        // publisher - a control or a function that raises an event (signal)
+        // subscriber - the code / function that reacts to the event (signal)
+        // signal - event (click, textchange, mouse over,..)
+        // One to Many one event can have many subscribers
+        button.addEventListener('click', handleClick);
+        // everytime we click the button, the handleClick function is run.
+         const handler1 = function() { console.log('Nice Job!!!'); };
+         button.addEventListener('click', handler1);
+        // button.addEventListener('click', function () { console.log('Nice Job!!!'); });
+        // everytime we click the button, the function inside is run.
+
+        // Timer Callback 
+        const handler2 = () => { console.log('DONE! Time to eat!'); };
+        setTimeout(handler2, 3000);
+        // it runs the console.log after each 1 sec or 1000 milliseconds
+        // the func will be called after the timeout period
+        var interval = setInterval(handler2, 2000);       
+		function stopInterval() {
+          clearInterval(interval);
+          console.log('stopped!!!');
+		}
+   </script>
+</body>
+</html>

@@ -2,21 +2,28 @@
 <html lang="en">
 
 <head>
-      <meta charset="UTF-8">
-      <meta name="viewport"
-            content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible"
-            content="ie=edge">
-      <title>PageC</title>
-      <script src="./sampleb.js"></script>
-      <!-- <script src="./sampleb.js"
-            async
-            defer></script> -->
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible"
+          content="ie=edge">
+    <title>PageC</title>
+    <!-- Returns null for document.querySelector('div');-->
+    <!--<script src="scripta.js"></script>-->
+     <script src="scripta.js"
+          defer></script> 
 </head>
-
 <body>
-      <div>Hi Check the external JS file</div>
-      <script src="./sampleb1.js"></script>
+    <div>Hi Check the external JS file</div>
+    <script src="scriptb.js"></script>
+    <p>...content before scripts...</p>
+    <script>
+        document.addEventListener('DOMContentLoaded',
+            () => alert("DOM ready after defer!"));
+    </script>
+    <script defer
+            src="https://javascript.info/article/script-async-defer/long.js?speed=1">
+    </script>
+    <p>...content after scripts...</p>
 </body>
-
 </html>

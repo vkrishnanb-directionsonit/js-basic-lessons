@@ -20,19 +20,21 @@
 
 <body>
     <p>Welcome to PageA</p>
-
     <noscript> JavaScript is turned off.
         <script type='text/javascript'>
             console.log('Inside no script...');
             alert('Hello NOSCRIPT');
         </script>
     </noscript>
-    <input type="button"
-           value="Click me!"
+    <input type="button" value="Click me!"
            onclick="say('Thanks for clicking!')" />
     <script type='text/javascript'>
         console.log('Hi...');
-        alert('Hello');
+        //alert('Hello');
+        var name;
+        console.log(name);
+        name = "venkat";
+        console.log(name);
     </script>
 </body>
 

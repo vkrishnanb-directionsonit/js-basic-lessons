@@ -14,7 +14,7 @@
   calculateBill(100, 0.13); // here 100, 0.13 are arguments
   ```
 
-![https://res.cloudinary.com/geekysrm/image/upload/v1576699296/parameters-arguments.jpg](https://res.cloudinary.com/geekysrm/image/upload/v1576699296/parameters-arguments.jpg)
+![function definition](https://res.cloudinary.com/geekysrm/image/upload/v1576699296/parameters-arguments.jpg)
 
 - Parameters are variables local to the function; available only inside the function.
 
@@ -27,7 +27,8 @@
 
   ```
 
-- So, we can either pass direct value or variables holding value or expressions resulting in a value to a function as arguments.
+- So, we can either pass direct value or variables holding value or expressions
+     resulting in a value to a function as arguments.
 
 - **Passing functions as arguments:**
 
@@ -41,25 +42,26 @@
   }
 
   // We can pass a function inside another
-  yell(doctorize("Soumya")); // HEY DR. SOUMYA
+  yell(doctorize("Jack")); // HEY DR. JACK
   // Above, returned value of doctorize function is passed to yell function
   ```
 
   - Default values:
 
     ```javascript
-    function yell(name = "Silly Goose") {
+    function yell(name = "Bad Boy") {
       return `HEY ${name.toUpperCase()}`;
     }
 
-    yell("Soumya"); // HEY SOUMYA
-    yell(); // HEY SILLY GOOSE
+    yell("Jack"); // HEY Jack
+    yell(); // HEY BAD BOY
 
-    // Above, if we don't pass any argument to yell function, then it takes the default value in function definition,
+    // Above, if we don't pass any argument to yell function,
+    // then it takes the default value in function definition,
     // here Silly Goose, else it takes whatever we pass as argument.
     ```
 
-  - **Important gotcha:**
+  - **Important:**
 
     ```javascript
     function calculateBill(billAmount, taxRate = 0.13, tipRate = 0.15) {
@@ -67,10 +69,16 @@
       const total = billAmount + billAmount * taxRate + billAmount * tipRate;
       return total;
     }
+    ```  
+```javascript
+    calculateBill(100);  
+    calculateBill(100, 0.66);
+```
 
-    // Suppose above, we want to pass the tipRate but not the taxRate and want taxRate to be default,
-    // then the only thing we can do is:
 
-    calculateBill(100, undefined, 0.66); // here the taxRate will default to 0.13 as
-    // we have passed undefined to it and the tipRate will be 0.66 as passed
-    ```
+Suppose above, we want to pass the tipRate but not the taxRate and want taxRate to be default,  
+then the only thing we can do is:
+
+
+    calculateBill(100, undefined, 0.66);  
+  here the taxRate will default to 0.13 as we have passed undefined to it and the tipRate will be 0.66 as passed

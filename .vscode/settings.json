@@ -32,7 +32,7 @@
 	"editor.formatOnSave": false,
 	// turn it off for JS and JSX, we will do this via eslint
     "[javascript]": {
-        "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.formatOnSave": true,
       },
 

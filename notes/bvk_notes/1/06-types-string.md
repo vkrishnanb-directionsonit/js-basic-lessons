@@ -1,17 +1,17 @@
 ### String
 
--   used for holding text
+- used for holding text
     
--   3 ways to create strings:
+- 3 ways to create strings:
     
     1.  using single quotes:
-        
-        `const first = 'Soumya';`
-        
+        ```javascript
+            const first = 'Suresh';
+        ```
     2.  using double quotes:
-        
-        `const middle = "Ranjan";`
-        
+         ```javascript
+            const middle = "Ranjan";
+        ```
     -   single quotes and double quotes are the same thing.
 
     3.  using backticks:
@@ -21,7 +21,7 @@
         ```
         used for: `"she's cool"`
     
-        or escaping: `'she\\'s cool'`
+        or escaping: `'she\'s cool'`
     
 -   backticks:
     
@@ -34,20 +34,20 @@
 -   Multi-line string:
     
     ```javascript
-      const song = 'Oh \\
-      I like \\
+      const food1 = 'Oh \
+      I like \
       pizza';
       
-      console.log(song); // Oh I like pizza
+      console.log(food1); // Oh I like pizza
     
     ```
     
     ```javascript
-      const song = `Oh
+      const food2 = `Oh
       I like
       pizza`;
       
-      console.log(song); 
+      console.log(food2); 
       /*
       Oh
       I like
@@ -65,7 +65,7 @@
     -   **Interpolation**: when you put a variable inside a string
     -   Example 1:
     
-    `const name = 'Soumya';`
+    `const name = 'Suresh';`
     
     `const hello = 'Hello my name is ' + name + '. Nice to meet you.'`
     
@@ -82,9 +82,9 @@
     -   Example 3:
 
     ```javascript        
-        const name = 'Soumya';  
+        const name = 'Suresh';  
         const hello = `Hello my name is ${name}. Nice to meet you. I am ${100+1} years old.`;  
-        console.log(hello); // Hello my name is Soumya. Nice to meet you. I am 101 years old.
+        console.log(hello); // Hello my name is Suresh. Nice to meet you. I am 101 years old.
 
         ```
 -   Backticks also used for _tagged template literals_.

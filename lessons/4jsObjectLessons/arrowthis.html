@@ -1,0 +1,41 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>ArrowAndThis</title>
+</head>
+<body>
+    <div id="demo">
+    </div>
+    <div>
+        <input type="button" value="Hitme!" id="btn" />
+    </div>
+    <script>
+       let hello = function () {
+            document.getElementById("demo").innerHTML += this;
+        }
+
+        // The window object calls the function:
+        window.addEventListener("load", hello);
+
+        // A button object calls the function:
+        document.getElementById("btn").addEventListener("click", hello);
+
+        class Pizza {
+            // constructor
+            constructor(toppings = [], customer) {
+                // computer instance property
+                this.toppings = toppings;
+                this.customer = customer;
+            }
+            getCokeOrPepsi = () => {
+                console.log('Coke');
+                console.log('Pepsi');
+                console.log(this); // this is the owner of the arrow function
+
+            }
+        }
+        const myPizza = new Pizza(['onions'], 'Venkat');
+        console.log(myPizza);
+        myPizza.getCokeOrPepsi();
+    </script>
+</body>
+</html>

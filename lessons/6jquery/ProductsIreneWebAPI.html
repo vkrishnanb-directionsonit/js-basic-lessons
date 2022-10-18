@@ -1,0 +1,146 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>WebApiClient</title>
+    <script src="jquery-3.6.1.min.js"></script>
+</head>
+<body>
+    <div>
+        <h2>All Products</h2>
+        <ul id="products" />
+    </div>
+    <div>
+        <h2>Search by ID</h2>
+        <input type="text" id="prodID" size="5" />
+        <button onclick="find();">Search</button>
+    </div>
+    <div>
+        <form action="/" method="post">
+            <h2> Product</h2>
+            <div>
+                <label for="pId" id="lblid">Product Id: </label>
+                <input type="text" id="pId" />
+            </div>
+            <div>
+                <label for="prodName" id="lblname">Product Name: </label>
+                <input type="text" id="prodName" />
+            </div>
+            <div>
+                <label for="prodCat" id="lblcat">Product Category: </label>
+                <input type="text" id="prodCat" />
+            </div>
+            <div>
+                <label for="prodprice" id="lblprice">Product Price: </label>
+                <input type="text" id="prodprice" size="5" />
+            </div>
+
+            <p id="product"></p>
+        </form>
+        <div>
+            <button onclick="post();">Post</button>
+        </div>
+        <div>
+            <button onclick="put();">Put</button>
+        </div>
+        <div>
+            <button onclick="remove();">Delete</button>
+        </div>
+    </div>
+    <script>
+        var uri = 'http://localhost:53636/api/Product'
+        // 'http://localhost:47503/api/products';
+
+        $(document).ready(function () {
+            // Send an AJAX request
+            $.getJSON(uri)
+                .done(function (data) {
+                    // On success, 'data' contains a list of products.
+                    $.each(data, function (key, item) {
+                        // Add a list item for the product.
+                        $('<li>', { text: formatItem(item) }).appendTo($('#products'));
+                    });
+                });
+        });
+
+        function formatItem(item) {
+            return item.ProductName + ': $' + item.ProductPrice;
+
+        }
+
+        function find() {
+            var id = $('#prodID').val();
+            $.getJSON(uri + '/' + id)
+                .done(function (data) {
+                    $('#pId').val(data.ProductID);
+                    $('#prodName').val(data.ProductName);
+                    $('#prodCat').val(data.ProductCategory);
+                    $('#prodprice').val(data.ProductPrice);
+                })
+                .fail(function (jqXHR, textStatus, err) {
+                    $('#product').text('Error: ' + err);
+                });
+        }
+        function post() {
+            console.log($("#pId").val());
+            $.post(uri, {
+                ProductID: $('#pId').val(),
+                ProductName: $('#prodName').val(),
+                ProductCategory: $('#prodCat').val(),
+                ProductPrice: $('#prodprice').val()
+            })
+                .done(function (data, status) {
+                    $('#product').text('Status: ' + status);
+                    $('#products li').remove();
+                    $.each(data, function (key, item) {
+                        $('<li>', { text: formatItem(item) }).appendTo($('#products'));
+                    });
+                })
+                .fail(function (jqXHR, textStatus, err) {
+                    $('#product').text('Error: ' + err);
+                });
+        }
+        function put() {
+            var dataObject = {
+                'ProductID': $('#pId').val(),
+                'ProductName': $('#prodName').val(),
+                'ProductCategory': $('#prodCat').val(),
+                'ProductPrice': $('#prodprice').val()
+            };
+            $.ajax({
+                url: uri,
+                type: 'PUT',
+                data: JSON.stringify(dataObject),
+                contentType: 'application/json'
+            })
+                .done(function (data, status) {
+                    $('#status').text('Status: ' + status);
+                    $('#products li').remove();
+                    $.each(data, function (key, item) {
+                        $('<li>', { text: formatItem(item) }).appendTo($('#products'));
+                    });
+                })
+                .fail(function (jqXHR, textStatus, err) {
+                    $('#status').text('Error: ' + err);
+                });
+        }
+        function remove() {
+            var id = $('#pId').val();
+            $.ajax({
+                url: uri + '/' + id,
+                type: 'DELETE',
+                contentType: 'application/json'
+            })
+                .done(function (data, status) {
+                    $('#status').text('Status: ' + status);
+                    $('#products li').remove();
+                    $('input').val("");
+                    $.each(data, function (key, item) {
+                        $('<li>', { text: formatItem(item) }).appendTo($('#products'));
+                    });
+                })
+                .fail(function (jqXHR, textStatus, err) {
+                    $('#status').text('Error: ' + err);
+                });
+        }
+    </script>
+</body>
+</html>

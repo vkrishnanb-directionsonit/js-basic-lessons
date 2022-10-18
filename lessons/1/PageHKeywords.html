@@ -12,7 +12,6 @@
 	<div id='max'></div>
 	<p></p>
 	<div id='min'></div>
-
 	<script type="text/javascript">
 		document.getElementById('max').innerHTML = `Max:${Number.MAX_VALUE}`;
 		document.getElementById('min').innerHTML = `Min:${Number.MIN_VALUE}`;
@@ -20,10 +19,12 @@
 		let s1 = 'Hello';
 		let result = x / s1;
 		document.writeln(`<p>result ${result}`); // NaN - not a number
+			// don't use === to check for Nan.
+			// use isNaN(result) instead
 		document.writeln('</p>result === NaN ');
 		// eslint-disable-next-line use-isnan
-		document.writeln(result === NaN);
-
+		document.writeln(result === NaN); // false
+		document.writeln(`<p>isNaN(result)  ${isNaN(result)}</p>`);
 		document.writeln(`<p>isNaN(x/s1)  ${isNaN(x / s1)}</p>`);
 		
 		const y = 0;
@@ -31,8 +32,8 @@
 		document.writeln(`<p>z = ${z}</p>`); // Infinity
 
 		s1 = null;
-		document.writeln(`<p>s1= ${s1}</p>`);
-		document.writeln(`<p>= ${null}</p>`);
+		document.writeln(`<p>s1= ${s1}</p>`); // null
+		document.writeln(`<p>= ${null}</p>`); // null
 
 		function checkNull_Undefined(sayThis) {
 			if (sayThis === undefined) {
@@ -46,7 +47,7 @@
 		}
 
 		checkNull_Undefined(s1);
-		let s2; //= undefined;
+		let s2; // undefined;
 		document.writeln(`<p>s2= ${s2}</p>`);
 		checkNull_Undefined(s2);
 	</script>

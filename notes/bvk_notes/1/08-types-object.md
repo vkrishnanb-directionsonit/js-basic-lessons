@@ -9,20 +9,17 @@
     
     ```javascript
       const person = {
-      	name: 'Soumya', // property: value
+      	name: 'Sam', // property: value
       	age: 100
       };
       
-      typeof person // object
+      console.log(typeof person); // object
       
       person.age = 101;
       console.log(person.age); // 101
     
     ```
-    
-
-.
-
+   
 -   Order of properties doesn't matter in an object.
 -   **Accessing properties:**
-    -   `person.name // Soumya` (dot notation)
+    -   `person.name // Sam` (dot notation)

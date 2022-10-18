@@ -1,4 +1,3 @@
-
 ## Number
 
 Only **one** type of number in JavaScript whether it has decimal point or not.
@@ -13,14 +12,15 @@ console.log(typeof money); // number
 
 -   `typeof` is used to find out the 'type' of a variable.
     
--   Various operations: `addition, subtraction, multiplication, division` can be done with nos.
+-   Various operations: `addition, subtraction, multiplication, division` can be done with numbers.
     
 -   Example
     
     `"10" * "10" // 100 (number) - converts the strings to number`  
     But "10" + "10" // 1010
 
-The above works with _multiplication, division and subtraction and not addition,_ because the + sign is also used for **concatenation**.
+The above works with _multiplication, division and subtraction and not with addition,_ 
+    because the + sign is also used for **concatenation**.
 
 -   **Math helper methods:**
     
@@ -66,12 +66,12 @@ When need to display to user, just convert them back.
 
 -   **Infinity and Negative Infinity:**
 
-`typeof Infinity; // number`
+`console.log(typeof Infinity); // number`
 
-`typeof -Infinity; // number`
+`console.log(typeof -Infinity); // number`
 
 -   **Not a Number (NaN):**
 
-`10 / 'hello' // NaN`
+`console.log(10 / 'hello'); // NaN`
 
-`typeof NaN // number`
+`console.log(typeof NaN); // number`

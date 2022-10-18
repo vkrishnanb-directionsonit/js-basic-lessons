@@ -10,45 +10,47 @@
 
 <body>
     <script>
-        // const cody = new Object();
-        // cody.living = true;
-        // cody.age = 33;
-        // cody.gender = 'male';
-        // cody.getGender = function () { return cody.gender; };
-        // console.log(cody.getGender()); // logs 'male'
+        const cody = new Object();
+        console.log( `cody.living: ${cody.living}`); // undefined
+        cody.living = true;
+        console.log(`cody.living: ${cody.living}`); // true
+        cody.age = 33;
+        cody.gender = 'male';
+        cody.getGender = function () { return cody.gender; };
+        console.log(cody.getGender()); // logs 'male'
     </script>
 
     <script>
-        // const myObject = new Object(); // produces an Object() object
-        // myObject['0'] = 'f';
-        // myObject['1'] = 'o';
-        // myObject['2'] = 'o';
-        // console.log(myObject); // logs Object { 0="f", 1="o", 2="o"}
-        // const myString = new String('foo'); // produces a String() object
-        // console.log(myString); // logs foo { 0="f", 1="o", 2="o"}
+        //const myObject = new Object(); // produces an Object() object
+        //myObject['0'] = 'f';
+        //myObject['1'] = 'o';
+        //myObject['2'] = 'o';
+        //console.log(myObject); // logs Object { 0="f", 1="o", 2="o"}
+        //const myString = new String('foo'); // produces a String() object
+        //console.log(myString); // logs foo { 0="f", 1="o", 2="o"}
     </script>
     <script>
         // define Person constructor function in order to create
-        //custom Person() objects later
-        // const Person = function (living, age, gender) {
-        //     this.living = living;
-        //     this.age = age;
-        //     this.gender = gender;
-        //     this.getGender = function () { return this.gender; };
-        // };
+        // a custom Person() objects later
+        const person = function (living, age, gender) {
+            this.living = living;
+            this.age = age;
+            this.gender = gender;
+            this.getGender = function () { return this.gender; };
+        };
         // instantiate a Person object and store it in the cody constiable
-        // const cody = new Person(true, 33, 'male');
-        // console.log(cody);
+        const cody = new Person(true, 33, 'male');
+        console.log(cody);
         /* The String() constructor function below,
         * having been defined by JavaScript, has the same pattern.
         Because the string constructor is native to JavaScript,
-        all we have to do to get a string instance is instantiate it.
+        all we have to do to get a string instance to instantiate it.
         But the pattern is the same whether we use native
         constructors like String() or user-defined constructors like Person().
         */
         // instantiate a String object stored in the myString constiable
-        //const myString = new String('foo');
-        //console.log(myString);
+        const myString = new String('foo');
+        console.log(myString);
     </script>
 
     <script>

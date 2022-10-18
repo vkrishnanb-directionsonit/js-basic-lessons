@@ -11,23 +11,30 @@
 <body>
   <script>
     'use strict'
+      // use strict declared at the beginning of the module will throw 
+      // the following error
+      // Uncaught ReferenceError: cat is not defined
+      /*
+      cat = `black`; 
+      console.log(`cat:${cat}`);
+      */
+      // use strict - forces to declare the variable cat first 
+      // correct usage is as follows
+      let cat = 'black';
+      console.log(`cat:${cat}`);
 
-    var first = 'west minister';
-    console.log(`first: ${first}`);
+    var first = 'West minister';
+    console.log(`first: ${first}`); // using backtick for interpolation
     let age = 300;
     console.log(`Age: ${age}`);
     let cool = true;
     console.log(`cool: ${cool}`);
-    const dog = 'Golden Retriever'
-    // const Dog = 'Golden Retriever'; // avoid starting variables with Upper case 
-    console.log(`Dog: ${dog}`);
+    // avoid starting variables with Upper case
+    // const Dog = 'Golden Retriever';  
+    // console.log(`Dog: ${Dog}`);
 
-    // use strict declared at the beginning of the module will throw the following error
-    cat = 'black'; // Uncaught ReferenceError: cat is not defined
-    console.log(`cat:${cat}`);
-// use strict - forces to declare the variable cat first correct usage is as follows
-    let cat = 'black';
-    console.log(`cat:${cat}`);
+    const dog = 'Golden Retriever'
+    console.log(`Dog: ${dog}`);
 
     // variables can have name with lowercase / _(under score) / $
     let _manager = 'John';
@@ -36,11 +43,13 @@
     console.log(`Manager: ${_manager}`);
     console.log(`City: ${$city}`);
     console.log(`$_$: ${$_$}`);
-    // let #_$ = 400; ==> Invalid character
+    // let #_$ = 400; //==> Invalid character
     // console.log(`#_$: ${#_$}`);
 
-    let _ = 1; // these work , but don't use these - reserved for lib lodash
-    let $ = 2; // these work , but don't use these - reserved for jquery
+    // these work , but don't use these - reserved for lib lodash
+      let _ = 1;
+    // these work , but don't use these - reserved for jquery
+    let $ = 2; 
     console.log(`_: ${_}`);
     console.log(`$: ${$}`);
 
@@ -55,7 +64,7 @@
     console.log(`snake_case: ${this_is_snake_case}`);
     // kebab case - not allowed in variables
     // const this-is-kebab-case = 'hot';
-    //   console.log(`kebab_case: ${this-is-kebab-case}`);
+    // console.log(`kebab_case: ${this-is-kebab-case}`);
 
     first = 'WestIndies';
     console.log(`first: ${first}`);

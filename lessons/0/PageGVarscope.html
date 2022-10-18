@@ -10,33 +10,36 @@
 
 <body>
 	<script type="text/javascript">
-		/* eslint-disable */
 		/* Scoping:
 		   -   var : function scoped (only available inside parent functions)
-		   -   let and const : block scoped (available inside a block denoted by { } )
-		   */
+		   -   let and const : block scoped 
+		   (available inside a block denoted by { } )
+		*/
 		var global = 'this is global';
 		function scopeFunction() {
-			alsoGlobal = 'This is also global!';
+			alsoGlobal = 'This is also global!'; // no var - so global
 			var notGlobal = 'This is private to scopeFunction!';
+			// nested function 
 			function subFunction() {
 				// We can still access notGlobal in this child function.
-				console.log(`Inside subFunction: ${vNotGlobal}`); 
+				console.log(`Inside subFunction: ${notGlobal}`); 
 				stillGlobal = 'No var keyword so this is global!';
 				var isPrivate = 'This is private to subFunction!';
 			}
-			//console.log(stillGlobal); // This is an error since we haven't executed subfunction
-			subFunction(); // execute subfunction
+			console.log(stillGlobal); // This is an error since we haven't executed subfunction
+			subFunction(); // execute subfunction() inside scopeFunction()
 			console.log(stillGlobal); // This will output 'No var keyword so this is global!'
-			//console.log(isPrivate); // This generate an error since isPrivate is private to subfunction().
+			console.log(isPrivate); // This generate an error since isPrivate is private to subfunction().
 			console.log(global); // outputs: 'this is global'
 		}
 		console.log(global); // outputs: 'this is global'
-		// console.log(alsoGlobal); // Not defined is generated, since we haven't run scopeFunction yet.
+		// console.log(alsoGlobal); 
+		// Not defined is generated, since we haven't run scopeFunction yet.
 		// console.log(stillGlobal);
 		scopeFunction();
 		console.log(alsoGlobal); // outputs: 'This is also global!';
-		// console.log(notGlobal); // Not defined is generated, not accessible outside the scopeFunction
+		// console.log(notGlobal); 
+		// Not defined is generated, not accessible outside the scopeFunction
 		console.log(stillGlobal);
 	</script>
 </body>

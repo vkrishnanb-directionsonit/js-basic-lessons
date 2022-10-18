@@ -26,7 +26,8 @@
     
 -   Variables created inside a function are not available outside the function. e.g. `total` above.
     
-    It is a **temporary variable.** After running of the function is complete, the variable is cleaned up or garbage-collected.
+    It is a **temporary variable.** After running of the function is complete,  
+    the variable is cleaned up or garbage-collected.
     
 -   **Returning value from function:**
     

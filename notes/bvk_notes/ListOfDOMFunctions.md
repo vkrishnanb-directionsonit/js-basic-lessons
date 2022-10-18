@@ -5,7 +5,7 @@ DOM Functions
 1. **document.querySelector('p');** - select the first "paragraph" element from the page
 
 1. **document.getElementById('feedback').innerHTML = 'Hello World!';**   
-    \<div id="myDiv">Hello!</div>  
+    \<div id="myDiv">Hello!\</div>  
     \<script type="text/javascript" language="javascript">  
         console.log(myDiv.innerText);  
         myElement = document.getElementById("myDiv");  
@@ -29,11 +29,11 @@ DOM Functions
     ```
 1. **document.body.innerHTML**  
     const myname = \`venkat\`;  
-    const hello = \`Hello my name is ${myname}. Nice to meet you. its is ${(104/1.8)-32} celsius now. And ${(40*1.8)+32} Fahrenheit\`;  
+    const hello = \`Hello my name is \${myname}. Nice to meet you. \`;  
     const html = \`
       \<div>  
-        \<h2>${myname}\</h2>  
-        \<p>${hello}\</p>  
+        \<h2>\${myname}\</h2>  
+        \<p>\${hello}\</p>  
       \</div>  
     \`;  
     document.body.innerHTML = html;
